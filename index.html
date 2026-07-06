@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jmoney | ดาวน์โหลดโปรแกรมเอกสารเบิกจ่ายแบบออฟไลน์สำหรับ Windows</title>
+  <meta
+    name="description"
+    content="ดาวน์โหลด jmoney โปรแกรม Windows แบบออฟไลน์สำหรับสร้างเอกสารเบิกจ่ายจาก Word template พร้อมคู่มือภาษาไทย และโซนสำหรับศึกษาที่มาของ source code, handoff, และ workflow การพัฒนาด้วย AI"
+  >
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: "#08111f",
+            night: "#0f1b33",
+            brass: "#b99042",
+            sand: "#f4ead7",
+            mist: "#d5deeb"
+          },
+          boxShadow: {
+            halo: "0 24px 80px rgba(8, 17, 31, 0.26)",
+            panel: "0 16px 48px rgba(8, 17, 31, 0.14)"
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="bg-[#f6efe4] text-slate-900 selection:bg-[#b99042] selection:text-white">
+  <div class="page-shell">
+    <div class="noise"></div>
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+    <div class="orb orb-c"></div>
+
+    <header class="relative z-20">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-10">
+        <a href="#top" class="flex items-center gap-4">
+          <img
+            src="./assets/icon/app-icon.png"
+            alt="jmoney icon"
+            class="h-14 w-14 rounded-2xl border border-white/60 bg-white/80 object-cover shadow-panel"
+          >
+          <div>
+            <p class="text-xs uppercase tracking-[0.35em] text-slate-500">jmoney</p>
+            <p class="text-lg font-semibold text-slate-950">offline Windows document app</p>
+          </div>
+        </a>
+
+        <button
+          id="menu-toggle"
+          type="button"
+          class="inline-flex rounded-full border border-slate-300 bg-white/80 px-4 py-2 text-sm font-medium text-slate-900 shadow-sm md:hidden"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          เมนู
+        </button>
+
+        <nav class="hidden items-center gap-6 text-sm font-medium text-slate-700 md:flex">
+          <a href="#download" class="hover:text-slate-950">ดาวน์โหลด</a>
+          <a href="#overview" class="hover:text-slate-950">ภาพรวม</a>
+          <a href="#study" class="hover:text-slate-950">โซนศึกษา</a>
+          <a href="#ai-workflow" class="hover:text-slate-950">AI workflow</a>
+        </nav>
+      </div>
+
+      <div id="mobile-menu" class="mx-6 hidden rounded-3xl border border-white/70 bg-white/90 p-4 shadow-panel md:hidden">
+        <nav class="flex flex-col gap-3 text-sm font-medium text-slate-700">
+          <a href="#download" class="mobile-link">ดาวน์โหลด</a>
+          <a href="#overview" class="mobile-link">ภาพรวม</a>
+          <a href="#study" class="mobile-link">โซนศึกษา</a>
+          <a href="#ai-workflow" class="mobile-link">AI workflow</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top" class="relative z-10">
+      <section class="mx-auto grid max-w-7xl gap-10 px-6 pb-16 pt-8 lg:grid-cols-[1.15fr_0.85fr] lg:px-10 lg:pb-24 lg:pt-10">
+        <div class="space-y-8">
+          <div class="inline-flex items-center gap-2 rounded-full border border-[#b99042]/30 bg-white/65 px-4 py-2 text-sm text-slate-700 shadow-sm backdrop-blur">
+            <span class="h-2.5 w-2.5 rounded-full bg-emerald-500"></span>
+            สำหรับ Windows แบบออฟไลน์ ใช้ Word template เป็น source of truth
+          </div>
+
+          <div class="space-y-6">
+            <p class="text-sm uppercase tracking-[0.36em] text-slate-500">Audience A · ผู้ใช้งานทั่วไป</p>
+            <h1 class="max-w-4xl text-5xl font-black leading-tight text-[#08111f] sm:text-6xl xl:text-7xl">
+              กรอกข้อมูลครั้งเดียว
+              <span class="block text-[#b99042]">แล้วสร้างเอกสาร Word หลายไฟล์</span>
+              ในเครื่องคุณเอง
+            </h1>
+            <p class="max-w-2xl text-lg leading-8 text-slate-700">
+              `jmoney` คือโปรแกรม Windows แบบ offline สำหรับงานเอกสารเบิกจ่ายจาก Word template
+              ออกแบบให้คนใช้งานจริงกดดาวน์โหลด ติดตั้ง และเริ่มใช้ได้ง่าย โดยไม่ต้องพึ่ง web app, cloud app,
+              หรือ Excel ระหว่าง runtime
+            </p>
+          </div>
+
+          <div id="download" class="grid gap-4 lg:grid-cols-2">
+            <a
+              href="./assets/downloads/ReimbursementDocApp-Installer.zip"
+              class="cta-card cta-primary group"
+              download
+            >
+              <p class="text-xs uppercase tracking-[0.3em] text-[#fdf4df]">Feature 1</p>
+              <h2 class="mt-3 text-3xl font-black text-white">ดาวน์โหลดโปรแกรม</h2>
+              <p class="mt-3 text-sm leading-7 text-white/80">
+                ชุดติดตั้งล่าสุดสำหรับผู้ใช้ทั่วไป แตกไฟล์แล้วเปิด `ReimbursementDocApp-Setup.exe`
+                เพื่อติดตั้งลงบน Windows
+              </p>
+              <div class="mt-6 flex items-center justify-between text-sm font-semibold text-white">
+                <span>Installer ZIP</span>
+                <span class="transition group-hover:translate-x-1">ดาวน์โหลด →</span>
+              </div>
+            </a>
+
+            <a
+              href="./assets/downloads/README-%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A5%E0%B8%87%E0%B9%82%E0%B8%9B%E0%B8%A3%E0%B9%81%E0%B8%81%E0%B8%A3%E0%B8%A1%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%87%E0%B8%B2%E0%B8%99.txt"
+              class="cta-card cta-secondary group"
+              download
+            >
+              <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Feature 1</p>
+              <h2 class="mt-3 text-3xl font-black text-[#08111f]">ดาวน์โหลดคู่มือ</h2>
+              <p class="mt-3 text-sm leading-7 text-slate-700">
+                คู่มือภาษาไทยสำหรับติดตั้ง การเปิดใช้งาน การดู output และแนวทางแก้ปัญหาเบื้องต้น
+              </p>
+              <div class="mt-6 flex items-center justify-between text-sm font-semibold text-slate-900">
+                <span>Thai user guide</span>
+                <span class="transition group-hover:translate-x-1">เปิดอ่าน →</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="rounded-[2rem] border border-white/70 bg-white/70 p-6 shadow-panel backdrop-blur">
+            <p class="text-sm uppercase tracking-[0.32em] text-slate-500">ภาพรวมสั้น ๆ ใต้ปุ่มดาวน์โหลด</p>
+            <div class="mt-5 grid gap-4 sm:grid-cols-2">
+              <div class="summary-chip">
+                ใช้กรอกข้อมูลครั้งเดียว แล้วสร้างเอกสาร Word ได้หลายไฟล์
+              </div>
+              <div class="summary-chip">
+                รันแบบ offline บน Windows ไม่ใช่ web app และไม่ต้องพึ่ง cloud
+              </div>
+              <div class="summary-chip">
+                เก็บโครงเอกสารไว้ใน Word template และมี preset สำหรับงานรอบถัดไป
+              </div>
+              <div class="summary-chip">
+                ใช้ JSON เป็นข้อมูลหลักของระบบ และไม่ต้องเปิด Excel ระหว่างใช้งาน
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-[2rem] border border-amber-300/40 bg-amber-50/90 p-6 shadow-panel backdrop-blur">
+            <p class="text-sm uppercase tracking-[0.32em] text-amber-800">Important For Users</p>
+            <h2 class="mt-3 text-2xl font-black text-[#08111f]">ถ้า Windows ขึ้นหน้าฟ้าเตือน ไม่ได้แปลว่าเครื่องเสีย</h2>
+            <p class="mt-3 max-w-3xl text-sm leading-7 text-slate-700">
+              ตอนเปิดไฟล์ติดตั้ง Windows อาจขึ้นข้อความประมาณว่า
+              <strong>“Windows protected your PC”</strong>
+              เพราะแอปยังไม่ได้มีชื่อผู้เผยแพร่ที่ Windows รู้จักในวงกว้าง
+              หน้าจอนี้เป็นการเตือนตามปกติของ Windows ไม่ใช่อาการไวรัสทำงานเองทันที
+            </p>
+
+            <div class="mt-5 grid gap-4 lg:grid-cols-[0.95fr_1.05fr]">
+              <div class="rounded-2xl border border-amber-200 bg-white/80 p-5">
+                <p class="text-sm font-semibold text-amber-900">วิธีกดต่อแบบง่าย ๆ</p>
+                <ol class="mt-3 space-y-3 text-sm leading-7 text-slate-700">
+                  <li>1. เมื่อหน้าฟ้าเด้งขึ้นมา ให้มองหาปุ่ม <strong>More info</strong></li>
+                  <li>2. กด <strong>More info</strong> ก่อน</li>
+                  <li>3. Windows จะโชว์รายละเอียดเพิ่ม และจะมีปุ่ม <strong>Run anyway</strong></li>
+                  <li>4. ถ้าคุณดาวน์โหลดไฟล์จากหน้านี้ ให้กด <strong>Run anyway</strong> เพื่อทำต่อ</li>
+                </ol>
+              </div>
+
+              <div class="rounded-2xl border border-amber-200 bg-white/80 p-5">
+                <p class="text-sm font-semibold text-amber-900">คำอธิบายแบบภาษาคนทั่วไป</p>
+                <ul class="mt-3 space-y-3 text-sm leading-7 text-slate-700">
+                  <li>ถ้ายังไม่เห็นปุ่ม `Run anyway` ให้กด `More info` ก่อนเสมอ</li>
+                  <li>หน้าต่างนี้เป็นการเตือนจาก Windows ว่าไฟล์ยังไม่เป็นที่รู้จัก ไม่ได้แปลว่าไฟล์นี้เปิดเองหรือทำลายเครื่องทันที</li>
+                  <li>ถ้าโหลดจากแหล่งอื่นที่ไม่ใช่หน้านี้ หรือมีชื่อไฟล์แปลกไปจากที่ระบุไว้ ให้หยุดก่อนและอย่าเพิ่งกดต่อ</li>
+                  <li>ไฟล์ที่ควรเปิดคือ `ReimbursementDocApp-Setup.exe` หลังแตก zip แล้ว</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-panel self-start rounded-[2rem] border border-white/70 bg-[#08111f] p-5 text-white shadow-halo">
+          <div class="rounded-[1.7rem] border border-white/10 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.16),_transparent_36%),linear-gradient(160deg,_rgba(24,41,75,0.98),_rgba(8,17,31,0.98))] p-6">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-xs uppercase tracking-[0.3em] text-[#f6d9a4]">What It Is</p>
+                <h2 class="mt-3 text-2xl font-black">offline Windows app</h2>
+              </div>
+              <span class="rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs font-semibold text-emerald-200">
+                local workflow
+              </span>
+            </div>
+
+            <div class="mt-6 grid gap-4">
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <p class="text-sm font-semibold text-[#f6d9a4]">สำหรับผู้ใช้ทั่วไป</p>
+                <ul class="mt-3 space-y-2 text-sm leading-6 text-slate-200">
+                  <li>ติดตั้งแล้วใช้ในเครื่องได้ทันที</li>
+                  <li>กรอกข้อมูลครั้งเดียวแล้วออกเอกสารหลายใบ</li>
+                  <li>เก็บ output ไว้ในโฟลเดอร์ของโปรแกรม</li>
+                  <li>แก้ Word template ภายหลังได้ถ้าต้องการ</li>
+                </ul>
+              </div>
+
+              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <p class="text-sm font-semibold text-[#c9d8ff]">สำหรับคนที่อยากศึกษา</p>
+                <ul class="mt-3 space-y-2 text-sm leading-6 text-slate-200">
+                  <li>มี handoff อธิบายสถาปัตยกรรมและ business rules</li>
+                  <li>แยก master data, preset data และ template registry ชัด</li>
+                  <li>แนวคิด reusable docx engine สำหรับระบบเอกสารอื่น</li>
+                  <li>มี workflow ใช้ AI ช่วย refine, debug, handoff และ iterate</li>
+                </ul>
+              </div>
+
+              <div class="rounded-2xl border border-[#b99042]/25 bg-[#b99042]/10 p-5">
+                <p class="text-sm font-semibold text-[#f9e5bc]">Narrative ที่ต้องชัด</p>
+                <p class="mt-2 text-sm leading-7 text-slate-100">
+                  หน้านี้เป็น landing page สำหรับดาวน์โหลดโปรแกรมและศึกษาแนวคิดของระบบ
+                  แต่ตัวโปรแกรมจริงคือ WinForms app ที่รันในเครื่องผู้ใช้ ไม่ใช่ SaaS, ไม่ใช่ dashboard บนเว็บ
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="overview" class="mx-auto max-w-7xl px-6 py-6 lg:px-10 lg:py-10">
+        <div class="section-head">
+          <p class="eyebrow">Audience Split</p>
+          <h2 class="section-title">แยกเส้นทางให้ชัดตั้งแต่หน้าหลัก</h2>
+          <p class="section-copy">
+            คนทั่วไปควรเห็นการดาวน์โหลดและคำอธิบายสั้น ๆ ก่อน ส่วนคนที่อยากต่อยอดควรได้ context เชิงเทคนิคโดยไม่รบกวนเส้นทางหลัก
+          </p>
+        </div>
+
+        <div class="mt-8 grid gap-6 lg:grid-cols-2">
+          <article class="panel-card">
+            <p class="eyebrow">Path A</p>
+            <h3 class="mt-3 text-2xl font-black text-[#08111f]">เส้นทางผู้ใช้งานทั่วไป</h3>
+            <ol class="mt-4 space-y-3 text-sm leading-7 text-slate-700">
+              <li>1. ดาวน์โหลด installer zip</li>
+              <li>2. เปิด `ReimbursementDocApp-Setup.exe`</li>
+              <li>3. ใช้คู่มือภาษาไทยถ้าต้องการขั้นตอนแบบละเอียด</li>
+              <li>4. กรอกข้อมูลครั้งเดียว แล้วสร้างเอกสาร Word จาก template ในเครื่อง</li>
+            </ol>
+          </article>
+
+          <article class="panel-card">
+            <p class="eyebrow">Path B</p>
+            <h3 class="mt-3 text-2xl font-black text-[#08111f]">เส้นทางคนศึกษา source และ workflow</h3>
+            <ol class="mt-4 space-y-3 text-sm leading-7 text-slate-700">
+              <li>1. อ่าน handoff เพื่อเข้าใจ source of truth และ packaging rules</li>
+              <li>2. เปิด source repo เมื่อใส่ลิงก์จริงแล้ว</li>
+              <li>3. ดูการแยก Word template, JSON data, preset JSON, และ docx engine</li>
+              <li>4. ใช้ AI เป็น structured collaborator ไม่ใช่ source of business truth</li>
+            </ol>
+          </article>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-6 py-12 lg:px-10 lg:py-16">
+        <div class="grid gap-6 lg:grid-cols-3">
+          <article class="metric-card">
+            <p class="metric-label">runtime</p>
+            <p class="metric-value">offline</p>
+            <p class="metric-copy">ทุกอย่างรันในเครื่องผู้ใช้ และ output ถูกเก็บในโฟลเดอร์ local ของแอป</p>
+          </article>
+          <article class="metric-card">
+            <p class="metric-label">document flow</p>
+            <p class="metric-value">5 files</p>
+            <p class="metric-copy">ระบบปัจจุบันสร้างเอกสาร reimbursement หลายไฟล์จากการกรอกข้อมูลชุดเดียว</p>
+          </article>
+          <article class="metric-card">
+            <p class="metric-label">source of truth</p>
+            <p class="metric-value">Word + JSON</p>
+            <p class="metric-copy">layout อยู่ที่ Word template ส่วนข้อมูลธุรกิจและ preset ถูกเก็บแยกใน JSON</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="study" class="mx-auto max-w-7xl px-6 py-8 lg:px-10 lg:py-12">
+        <div class="section-head">
+          <p class="eyebrow">Audience B · Study Zone</p>
+          <h2 class="section-title">source code, handoff, และฐานความคิดสำหรับต่อยอด</h2>
+          <p class="section-copy">
+            ส่วนนี้ตั้งใจแยกจากเส้นทางดาวน์โหลด เพื่อให้คนที่อยากศึกษาเข้าใจโครงสร้างระบบ, packaging, และวิธีใช้ AI พัฒนางานเอกสารแบบ local-first
+          </p>
+        </div>
+
+        <div class="mt-8 grid gap-6 lg:grid-cols-[0.88fr_1.12fr]">
+          <div class="panel-card panel-card-dark">
+            <p class="eyebrow text-[#f6d9a4]">Study Assets</p>
+            <h3 class="mt-3 text-3xl font-black text-white">เริ่มจากสิ่งที่อ่านได้ทันที</h3>
+            <div class="mt-6 grid gap-4">
+              <a href="./docs/HANDOFF_APP.md" class="study-link">
+                <span>
+                  <strong>อ่าน handoff หลัก</strong>
+                  <small>โครงสร้างระบบ, preset logic, packaging, business rules</small>
+                </span>
+                <span>→</span>
+              </a>
+
+              <a
+                id="source-repo-link"
+                href="./assets/downloads/ReimbursementDocApp-Source.zip"
+                class="study-link"
+                download
+              >
+                <span>
+                  <strong>ดาวน์โหลด source code</strong>
+                  <small>source zip สำหรับคนที่อยากเปิดดูโค้ด, handoff, และ workflow ของระบบ</small>
+                </span>
+                <span>↓</span>
+              </a>
+            </div>
+
+            <div class="mt-6 rounded-2xl border border-amber-300/20 bg-amber-300/10 p-4 text-sm leading-7 text-amber-100">
+              ถ้าจะปล่อย public บน GitHub Pages หรือ hosting อื่น ควรพิจารณาว่าจะเก็บ source zip ไว้ใน repo นี้ หรือเปลี่ยนไปลิงก์ source repo/release ภายนอกแทน
+            </div>
+          </div>
+
+          <div class="grid gap-6">
+            <article class="panel-card">
+              <p class="eyebrow">Architecture</p>
+              <h3 class="mt-3 text-2xl font-black text-[#08111f]">แนวคิดระบบที่เอาไปใช้ซ้ำได้</h3>
+              <div class="mt-5 grid gap-4 sm:grid-cols-2">
+                <div class="idea-card">
+                  <h4>Word template</h4>
+                  <p>ให้ layout อยู่ใน `.docx` แล้วใช้ code แทน `{tag}` แบบไม่ทำลายโครงหน้าเอกสาร</p>
+                </div>
+                <div class="idea-card">
+                  <h4>Master data JSON</h4>
+                  <p>เก็บข้อมูลอ้างอิงไว้ใน `app_database.json` เพื่อแยก business truth ออกจาก UI</p>
+                </div>
+                <div class="idea-card">
+                  <h4>User preset JSON</h4>
+                  <p>เก็บ preset ของผู้ใช้แยกจาก master data เพื่อรองรับงานรอบเดือนถัดไปแบบปลอดภัย</p>
+                </div>
+                <div class="idea-card">
+                  <h4>Offline packaging</h4>
+                  <p>ใช้ installer + payload + template folder เพื่อให้ workflow ใช้งานจริงในหน่วยงานได้ง่าย</p>
+                </div>
+              </div>
+            </article>
+
+            <article id="ai-workflow" class="panel-card">
+              <p class="eyebrow">AI Workflow</p>
+              <h3 class="mt-3 text-2xl font-black text-[#08111f]">ใช้ AI ทำโปรแกรมเอกสารอย่างไรให้ต่อยอดได้จริง</h3>
+              <div class="mt-5 grid gap-4 md:grid-cols-2">
+                <div class="ai-step">
+                  <span>01</span>
+                  <p>ใช้ AI ช่วย refine requirement และแยกปัญหาเป็น UI, business logic, template, data, packaging</p>
+                </div>
+                <div class="ai-step">
+                  <span>02</span>
+                  <p>ให้ AI ช่วย debug เฉพาะจุด, สรุปผลกระทบ, และลดงานลองผิดลองถูกในส่วนที่เป็น code</p>
+                </div>
+                <div class="ai-step">
+                  <span>03</span>
+                  <p>ใช้ AI ช่วยเขียน handoff, สรุป source of truth, และรักษาบริบทให้ chat ถัดไปไม่เริ่มจากศูนย์</p>
+                </div>
+                <div class="ai-step">
+                  <span>04</span>
+                  <p>เก็บ business data ที่ยืนยันแล้วไว้ใน JSON ชัด ๆ ไม่ปล่อยให้ AI เดาแทนข้อมูลจริงของงานราชการ</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="relative z-10 mt-12 border-t border-white/60 bg-white/65 backdrop-blur">
+      <div class="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-8 text-sm text-slate-600 lg:flex-row lg:items-center lg:justify-between lg:px-10">
+        <p>jmoney landing page สำหรับแจกโปรแกรม offline Windows app และเปิดทางให้คนศึกษา source/handoff ต่อ</p>
+        <p>Repo นี้เป็น distribution layer ไม่ใช่ source repo ของตัวแอปหลัก</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
