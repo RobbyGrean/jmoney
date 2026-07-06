@@ -118,6 +118,13 @@ body {
   color: rgb(51 65 85);
 }
 
+.guide-note {
+  border-radius: 1.5rem;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: rgba(255, 255, 255, 0.62);
+  padding: 1rem 1.2rem;
+}
+
 .section-head {
   max-width: 50rem;
 }
@@ -264,6 +271,174 @@ body {
 .reveal.is-visible {
   opacity: 1;
   translate: 0 0;
+}
+
+.guide-shell {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.guide-hero {
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.9), rgba(244, 234, 215, 0.82));
+  padding: 2rem;
+  box-shadow: 0 16px 48px rgba(8, 17, 31, 0.08);
+}
+
+.guide-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.guide-section {
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.76);
+  padding: 1.7rem;
+  box-shadow: 0 16px 48px rgba(8, 17, 31, 0.08);
+}
+
+.guide-step-list,
+.guide-bullet-list {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.guide-step,
+.guide-bullet,
+.guide-callout {
+  border-radius: 1.25rem;
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  background: rgba(248, 250, 252, 0.88);
+  padding: 1rem 1.1rem;
+}
+
+.guide-step {
+  display: grid;
+  gap: 0.55rem;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+}
+
+.guide-step-number {
+  display: inline-flex;
+  height: 2rem;
+  width: 2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #08111f;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.guide-step strong,
+.guide-bullet strong,
+.guide-callout strong {
+  display: block;
+  color: #08111f;
+}
+
+.guide-step p,
+.guide-bullet p,
+.guide-callout p {
+  margin-top: 0.3rem;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgb(71 85 105);
+}
+
+.guide-inline-code {
+  border-radius: 0.7rem;
+  background: rgba(8, 17, 31, 0.06);
+  padding: 0.15rem 0.45rem;
+  font-family: Consolas, monospace;
+  font-size: 0.92em;
+}
+
+.guide-code-block {
+  margin-top: 1rem;
+  overflow-x: auto;
+  border-radius: 1.4rem;
+  background: #08111f;
+  padding: 1rem 1.1rem;
+  color: #e2e8f0;
+  font-family: Consolas, monospace;
+  font-size: 0.92rem;
+  line-height: 1.8;
+}
+
+.guide-kicker {
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #7b5a24;
+}
+
+.guide-title {
+  margin-top: 0.8rem;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 900;
+  line-height: 1.05;
+  color: #08111f;
+}
+
+.guide-subtitle {
+  margin-top: 1rem;
+  max-width: 48rem;
+  font-size: 1.02rem;
+  line-height: 1.9;
+  color: rgb(71 85 105);
+}
+
+.guide-chip-row {
+  margin-top: 1.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.guide-chip {
+  border-radius: 999px;
+  border: 1px solid rgba(185, 144, 66, 0.24);
+  background: rgba(255, 255, 255, 0.76);
+  padding: 0.6rem 0.95rem;
+  font-size: 0.9rem;
+  color: rgb(51 65 85);
+}
+
+.guide-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.guide-action-primary,
+.guide-action-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.9rem 1.3rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.guide-action-primary {
+  background: #08111f;
+  color: white;
+}
+
+.guide-action-secondary {
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  background: rgba(255, 255, 255, 0.82);
+  color: #08111f;
 }
 
 @keyframes drift-a {

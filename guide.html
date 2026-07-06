@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>คู่มือการใช้งาน jmoney | ติดตั้ง ใช้งาน และแก้ปัญหาเบื้องต้น</title>
+  <meta
+    name="description"
+    content="คู่มือการใช้งาน jmoney แบบอ่านง่าย สำหรับผู้ใช้ทั่วไป ครอบคลุมการติดตั้ง การเปิดโปรแกรม การดู output การแก้ Template และการแก้ปัญหาเบื้องต้น"
+  >
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="bg-[#f6efe4] text-slate-900 selection:bg-[#b99042] selection:text-white">
+  <div class="guide-shell">
+    <div class="noise"></div>
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+    <div class="orb orb-c"></div>
+
+    <header class="relative z-20">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-10">
+        <a href="./index.html" class="flex items-center gap-4">
+          <img
+            src="./assets/icon/app-icon.png"
+            alt="jmoney icon"
+            class="h-14 w-14 rounded-2xl border border-white/60 bg-white/80 object-cover shadow-panel"
+          >
+          <div>
+            <p class="text-xs uppercase tracking-[0.35em] text-slate-500">jmoney</p>
+            <p class="text-lg font-semibold text-slate-950">คู่มือการใช้งานสำหรับผู้ใช้ทั่วไป</p>
+          </div>
+        </a>
+
+        <a href="./index.html" class="guide-action-secondary">กลับหน้าแรก</a>
+      </div>
+    </header>
+
+    <main class="relative z-10 mx-auto max-w-7xl px-6 pb-16 pt-4 lg:px-10 lg:pb-24">
+      <section class="guide-hero">
+        <p class="guide-kicker">Thai User Guide</p>
+        <h1 class="guide-title">คู่มือการใช้งาน jmoney</h1>
+        <p class="guide-subtitle">
+          หน้านี้ทำมาเพื่อให้ผู้ใช้ทั่วไปอ่านแล้วทำตามได้ทันที
+          ตั้งแต่ดาวน์โหลด ติดตั้ง เปิดโปรแกรม ไปจนถึงการดูไฟล์ที่สร้างเสร็จและการแก้ปัญหาเบื้องต้น
+          โดยตัวโปรแกรมนี้เป็น <strong>offline Windows app</strong> ที่ทำงานในเครื่องของคุณเอง
+        </p>
+
+        <div class="guide-chip-row">
+          <div class="guide-chip">ใช้กับ Windows</div>
+          <div class="guide-chip">ทำงานแบบออฟไลน์</div>
+          <div class="guide-chip">สร้างเอกสาร Word จาก template</div>
+          <div class="guide-chip">เหมาะกับผู้ใช้ทั่วไป</div>
+        </div>
+
+        <div class="guide-actions">
+          <a href="./assets/downloads/ReimbursementDocApp-Installer.zip" class="guide-action-primary" download>ดาวน์โหลดโปรแกรม</a>
+          <a href="./assets/downloads/README-%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A5%E0%B8%87%E0%B9%82%E0%B8%9B%E0%B8%A3%E0%B9%81%E0%B8%81%E0%B8%A3%E0%B8%A1%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%87%E0%B8%B2%E0%B8%99.txt" class="guide-action-secondary" download>ดาวน์โหลดคู่มือข้อความ</a>
+        </div>
+      </section>
+
+      <section class="mt-8 guide-grid lg:grid-cols-2">
+        <article class="guide-section">
+          <p class="guide-kicker">Section 1</p>
+          <h2 class="section-title">วิธีติดตั้ง</h2>
+          <div class="guide-step-list">
+            <div class="guide-step">
+              <span class="guide-step-number">1</span>
+              <div>
+                <strong>แตกไฟล์ <span class="guide-inline-code">ReimbursementDocApp-Installer.zip</span> ก่อน</strong>
+                <p>หลังดาวน์โหลดเสร็จ ให้แตก zip ออกมาก่อน เพื่อให้เห็นไฟล์ติดตั้งด้านใน</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <span class="guide-step-number">2</span>
+              <div>
+                <strong>เปิดไฟล์ <span class="guide-inline-code">ReimbursementDocApp-Setup.exe</span></strong>
+                <p>นี่คือไฟล์ที่ใช้ติดตั้งโปรแกรมลงในเครื่อง Windows ของคุณ</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <span class="guide-step-number">3</span>
+              <div>
+                <strong>รอให้โปรแกรมติดตั้งเสร็จ</strong>
+                <p>ตัวติดตั้งจะคัดลอกไฟล์และตั้งค่าโฟลเดอร์ที่โปรแกรมต้องใช้ให้อัตโนมัติ</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <span class="guide-step-number">4</span>
+              <div>
+                <strong>หลังติดตั้งเสร็จจะมีไอคอนบน Desktop</strong>
+                <p>มองหาไอคอนชื่อ <span class="guide-inline-code">ReimbursementDocApp</span> บนหน้า Desktop ได้เลย</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <span class="guide-step-number">5</span>
+              <div>
+                <strong>เปิดโปรแกรมจากไอคอนบน Desktop</strong>
+                <p>คุณสามารถเริ่มใช้งานได้ทันทีโดยไม่ต้องตั้งค่าอะไรซับซ้อนเพิ่ม</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="guide-section">
+          <p class="guide-kicker">Section 2</p>
+          <h2 class="section-title">ถ้า Windows ขึ้นหน้าฟ้าเตือน</h2>
+          <div class="guide-callout">
+            <strong>Windows อาจขึ้นข้อความ “Windows protected your PC”</strong>
+            <p>
+              นี่เป็นคำเตือนปกติของ Windows สำหรับแอปที่ยังไม่เป็นที่รู้จักในวงกว้าง
+              ไม่ได้แปลว่าเครื่องเสียหรือไวรัสเริ่มทำงานเองทันที
+            </p>
+          </div>
+          <div class="guide-step-list">
+            <div class="guide-step">
+              <span class="guide-step-number">1</span>
+              <div>
+                <strong>กด <span class="guide-inline-code">More info</span></strong>
+                <p>ถ้ายังไม่เห็นปุ่มทำต่อ ให้กดปุ่มนี้ก่อน</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <span class="guide-step-number">2</span>
+              <div>
+                <strong>มองหาปุ่ม <span class="guide-inline-code">Run anyway</span></strong>
+                <p>หลังจากกด More info แล้ว Windows จะโชว์รายละเอียดเพิ่มและมีปุ่มนี้ให้</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <span class="guide-step-number">3</span>
+              <div>
+                <strong>กด <span class="guide-inline-code">Run anyway</span> ถ้าไฟล์มาจากหน้านี้จริง</strong>
+                <p>ไฟล์ที่ควรเปิดคือ <span class="guide-inline-code">ReimbursementDocApp-Setup.exe</span> หลังแตก zip แล้ว</p>
+              </div>
+            </div>
+          </div>
+          <div class="guide-bullet-list">
+            <div class="guide-bullet">
+              <strong>ควรหยุดก่อนถ้ามีอะไรไม่ตรง</strong>
+              <p>ถ้าชื่อไฟล์ไม่ตรง หรือคุณได้ไฟล์มาจากแหล่งอื่นที่ไม่ใช่หน้าแจกนี้ อย่าเพิ่งกดต่อ</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="mt-8 guide-grid lg:grid-cols-2">
+        <article class="guide-section">
+          <p class="guide-kicker">Section 3</p>
+          <h2 class="section-title">โปรแกรมถูกติดตั้งไว้ที่ไหน</h2>
+          <p class="section-copy">
+            โดยปกติโปรแกรมจะถูกติดตั้งไว้ที่ path นี้:
+          </p>
+          <div class="guide-code-block">%LOCALAPPDATA%\ReimbursementDocApp</div>
+          <p class="section-copy">
+            ตัวอย่าง path จริง:
+          </p>
+          <div class="guide-code-block">C:\Users\ชื่อผู้ใช้\AppData\Local\ReimbursementDocApp</div>
+          <div class="guide-bullet-list">
+            <div class="guide-bullet">
+              <strong>ไฟล์สำคัญที่อยู่ในโฟลเดอร์นี้</strong>
+              <p><span class="guide-inline-code">ReimbursementDocApp.exe</span> คือโปรแกรมหลัก, <span class="guide-inline-code">Template</span> คือโฟลเดอร์เก็บ Word template, <span class="guide-inline-code">output</span> คือโฟลเดอร์เก็บเอกสารที่สร้างเสร็จ และ <span class="guide-inline-code">app_database.json</span> คือข้อมูลที่ระบบใช้</p>
+            </div>
+            <div class="guide-bullet">
+              <strong>ผู้ใช้ทั่วไปไม่จำเป็นต้องเข้า path นี้บ่อย</strong>
+              <p>เพราะหลังติดตั้งจะมี shortcut บน Desktop และ Start Menu ให้แล้ว</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="guide-section">
+          <p class="guide-kicker">Section 4</p>
+          <h2 class="section-title">วิธีใช้งานแบบสั้นและชัด</h2>
+          <div class="guide-step-list">
+            <div class="guide-step">
+              <span class="guide-step-number">1</span>
+              <div>
+                <strong>เปิดโปรแกรม <span class="guide-inline-code">ReimbursementDocApp</span></strong>
+                <p>เริ่มจากไอคอนบน Desktop หรือ Start Menu</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <span class="guide-step-number">2</span>
+              <div>
+                <strong>ดูช่อง Template</strong>
+                <p>ปกติโปรแกรมจะชี้ไปยังโฟลเดอร์ Template ให้อัตโนมัติอยู่แล้ว จึงไม่ต้องแก้ถ้าใช้งานตามปกติ</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <span class="guide-step-number">3</span>
+              <div>
+                <strong>ดูช่อง Output</strong>
+                <p>นี่คือที่เก็บไฟล์ Word ที่สร้างเสร็จแล้ว</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <span class="guide-step-number">4</span>
+              <div>
+                <strong>เลือกเดือนส่งมอบและปี พ.ศ.</strong>
+                <p>โปรแกรมจะคำนวณงวดและปีงบประมาณให้โดยอัตโนมัติ</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <span class="guide-step-number">5</span>
+              <div>
+                <strong>เลือกเอกสารที่ต้องการสร้าง</strong>
+                <p>ถ้ายังไม่แน่ใจ ให้เลือกทั้งหมดก่อนก็ได้</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <span class="guide-step-number">6</span>
+              <div>
+                <strong>กรอกข้อมูลในแท็บต่าง ๆ ให้ครบ</strong>
+                <p>ระบบถูกออกแบบให้กรอกข้อมูลชุดเดียวแล้วสร้างเอกสาร Word หลายไฟล์ต่อเนื่องได้</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <span class="guide-step-number">7</span>
+              <div>
+                <strong>กดปุ่มสร้าง Word</strong>
+                <p>โปรแกรมจะเปิดหน้าตรวจสอบอีกครั้งก่อนสร้างจริง</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <span class="guide-step-number">8</span>
+              <div>
+                <strong>ถ้าข้อมูลถูกต้องให้กด <span class="guide-inline-code">OK</span></strong>
+                <p>ถ้ายังต้องกลับไปแก้ ให้กด <span class="guide-inline-code">Cancel</span></p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <span class="guide-step-number">9</span>
+              <div>
+                <strong>หลังสร้างเสร็จ โปรแกรมจะถามว่าจะเปิดโฟลเดอร์ output หรือไม่</strong>
+                <p>ถ้าต้องการดูไฟล์ทันที ให้ตอบเปิดโฟลเดอร์ได้เลย</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="mt-8 guide-grid lg:grid-cols-2">
+        <article class="guide-section">
+          <p class="guide-kicker">Section 5</p>
+          <h2 class="section-title">ไฟล์ที่สร้างเสร็จอยู่ตรงไหน</h2>
+          <p class="section-copy">
+            ปกติไฟล์เอกสารที่สร้างเสร็จจะอยู่ที่:
+          </p>
+          <div class="guide-code-block">%LOCALAPPDATA%\ReimbursementDocApp\output</div>
+          <p class="section-copy">
+            หรือดูจากช่อง <span class="guide-inline-code">Output</span> ในโปรแกรมก็ได้
+          </p>
+        </article>
+
+        <article class="guide-section">
+          <p class="guide-kicker">Section 6</p>
+          <h2 class="section-title">ถ้าต้องการแก้ Template</h2>
+          <p class="section-copy">
+            ให้เข้าไปที่โฟลเดอร์นี้:
+          </p>
+          <div class="guide-code-block">%LOCALAPPDATA%\ReimbursementDocApp\Template</div>
+          <div class="guide-bullet-list">
+            <div class="guide-bullet">
+              <strong>แก้ไฟล์ Word `.docx` ได้โดยตรง</strong>
+              <p>เหมาะสำหรับปรับข้อความหรือหน้าตาเอกสารบางจุดตามที่ต้องการ</p>
+            </div>
+            <div class="guide-bullet">
+              <strong>อย่าลบ tag ในวงเล็บปีกกา</strong>
+              <p>เช่น <span class="guide-inline-code">{ชื่อโรงเรียน}</span> ถ้ายังต้องการให้โปรแกรมแทนค่าข้อมูลให้อัตโนมัติ</p>
+            </div>
+            <div class="guide-bullet">
+              <strong>ปิดไฟล์ Word ก่อนกลับมาสร้างเอกสารใหม่</strong>
+              <p>เพื่อป้องกันปัญหาไฟล์ถูกล็อกและเขียนทับไม่ได้</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="mt-8 guide-grid lg:grid-cols-2">
+        <article class="guide-section">
+          <p class="guide-kicker">Section 7</p>
+          <h2 class="section-title">ข้อควรระวัง</h2>
+          <div class="guide-bullet-list">
+            <div class="guide-bullet">
+              <strong>ปิดไฟล์ Word เดิมก่อนสร้างเอกสารใหม่</strong>
+              <p>ถ้าไฟล์เดิมยังเปิดค้างอยู่ โปรแกรมอาจเขียนทับไฟล์นั้นไม่ได้</p>
+            </div>
+            <div class="guide-bullet">
+              <strong>ตรวจเดือนส่งมอบและปี พ.ศ. ให้ถูกก่อนสร้าง</strong>
+              <p>ค่าพวกนี้มีผลต่อข้อมูลที่โปรแกรมคำนวณและใส่ลงในเอกสาร</p>
+            </div>
+            <div class="guide-bullet">
+              <strong>ถ้าโปรแกรมแจ้งว่าไม่พบ Template</strong>
+              <p>ให้ตรวจว่ามีโฟลเดอร์ <span class="guide-inline-code">Template</span> อยู่ในโฟลเดอร์ติดตั้งหรือไม่</p>
+            </div>
+            <div class="guide-bullet">
+              <strong>ถ้าโปรแกรมเปิดได้แต่สร้างเอกสารไม่ออก</strong>
+              <p>ให้ตรวจว่ามีโฟลเดอร์ <span class="guide-inline-code">output</span> อยู่และใช้งานได้ตามปกติ</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="guide-section">
+          <p class="guide-kicker">Section 8</p>
+          <h2 class="section-title">ถอนการติดตั้ง และการขอความช่วยเหลือ</h2>
+          <div class="guide-step-list">
+            <div class="guide-step">
+              <span class="guide-step-number">1</span>
+              <div>
+                <strong>ถอนการติดตั้ง</strong>
+                <p>เปิด Start Menu แล้วค้นหา <span class="guide-inline-code">ReimbursementDocApp</span> จากนั้นเลือก <span class="guide-inline-code">Uninstall ReimbursementDocApp</span></p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <span class="guide-step-number">2</span>
+              <div>
+                <strong>ถ้าใช้งานไม่ได้</strong>
+                <p>ควรแจ้งผู้ดูแลพร้อมข้อมูลว่าโปรแกรมขึ้นข้อความอะไร, ทำถึงขั้นตอนไหนแล้วมีปัญหา, ไฟล์ Word ที่ออกมาผิดตรงไหน และถ้ามีภาพหน้าจอให้แนบไปด้วย</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
