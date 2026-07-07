@@ -8,21 +8,6 @@ body {
     radial-gradient(circle at top left, rgba(185, 144, 66, 0.18), transparent 24%),
     radial-gradient(circle at top right, rgba(24, 41, 75, 0.18), transparent 26%),
     linear-gradient(180deg, #f7f0e5 0%, #f3ebdf 40%, #f6f2ea 100%);
-  opacity: 0;
-  transform: translateY(18px) scale(0.995);
-  transition:
-    opacity 420ms ease,
-    transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-body.page-ready {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-
-body.page-leaving {
-  opacity: 0;
-  transform: translateY(-10px) scale(0.992);
 }
 
 .page-shell {
@@ -76,36 +61,6 @@ body.page-leaving {
   height: 18rem;
   background: rgba(255, 255, 255, 0.42);
   animation: drift-c 14s ease-in-out infinite;
-}
-
-.page-transition-overlay {
-  position: fixed;
-  inset: 0;
-  z-index: 80;
-  pointer-events: none;
-  opacity: 0;
-  background:
-    radial-gradient(circle at 18% 50%, rgba(185, 144, 66, 0.24), transparent 22%),
-    radial-gradient(circle at 82% 42%, rgba(24, 41, 75, 0.22), transparent 24%),
-    linear-gradient(135deg, rgba(246, 239, 228, 0.82), rgba(255, 252, 246, 0.96));
-  backdrop-filter: blur(16px);
-  transition: opacity 380ms ease;
-}
-
-.page-transition-overlay::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(110deg, transparent 0%, rgba(255, 255, 255, 0.48) 48%, transparent 68%);
-  transform: translateX(-135%);
-}
-
-.page-transition-overlay.is-active {
-  opacity: 1;
-}
-
-.page-transition-overlay.is-active::after {
-  animation: page-sheen 520ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 .hero-panel {
@@ -697,11 +652,6 @@ body.page-leaving {
 @keyframes shimmer-sweep {
   0% { transform: translateX(-140%) rotate(18deg); }
   48%, 100% { transform: translateX(220%) rotate(18deg); }
-}
-
-@keyframes page-sheen {
-  0% { transform: translateX(-135%); }
-  100% { transform: translateX(135%); }
 }
 
 @media (max-width: 1024px) {
