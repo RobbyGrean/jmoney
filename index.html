@@ -210,45 +210,76 @@
           </div>
         </div>
 
-        <div class="hero-panel self-start rounded-[2rem] border border-white/70 bg-[#08111f] p-5 text-white shadow-halo">
-          <div class="rounded-[1.7rem] border border-white/10 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.16),_transparent_36%),linear-gradient(160deg,_rgba(24,41,75,0.98),_rgba(8,17,31,0.98))] p-6">
-            <div class="flex items-start justify-between gap-4">
-              <div>
-                <p class="text-xs uppercase tracking-[0.3em] text-[#f6d9a4]">What It Is</p>
-                <h2 class="mt-3 text-2xl font-black">offline Windows app</h2>
+        <div class="flex flex-col gap-6">
+          <div class="hero-panel self-start rounded-[2rem] border border-white/70 bg-[#08111f] p-5 text-white shadow-halo">
+            <div class="rounded-[1.7rem] border border-white/10 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.16),_transparent_36%),linear-gradient(160deg,_rgba(24,41,75,0.98),_rgba(8,17,31,0.98))] p-6">
+              <div class="flex items-start justify-between gap-4">
+                <div>
+                  <p class="text-xs uppercase tracking-[0.3em] text-[#f6d9a4]">What It Is</p>
+                  <h2 class="mt-3 text-2xl font-black">offline Windows app</h2>
+                </div>
+                <span class="rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs font-semibold text-emerald-200">
+                  local workflow
+                </span>
               </div>
-              <span class="rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs font-semibold text-emerald-200">
-                local workflow
-              </span>
+
+              <div class="mt-6 grid gap-4">
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <p class="text-sm font-semibold text-[#f6d9a4]">สำหรับผู้ใช้ทั่วไป</p>
+                  <ul class="mt-3 space-y-2 text-sm leading-6 text-slate-200">
+                    <li>ติดตั้งแล้วใช้ในเครื่องได้ทันที</li>
+                    <li>กรอกข้อมูลครั้งเดียวแล้วออกเอกสารหลายใบ</li>
+                    <li>เก็บ output ไว้ในโฟลเดอร์ของโปรแกรม</li>
+                    <li>แก้ Word template ภายหลังได้ถ้าต้องการ</li>
+                  </ul>
+                </div>
+
+                <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <p class="text-sm font-semibold text-[#c9d8ff]">สำหรับคนที่อยากศึกษา</p>
+                  <ul class="mt-3 space-y-2 text-sm leading-6 text-slate-200">
+                    <li>มี handoff อธิบายสถาปัตยกรรมและ business rules</li>
+                    <li>แยก master data, preset data และ template registry ชัด</li>
+                    <li>แนวคิด reusable docx engine สำหรับระบบเอกสารอื่น</li>
+                    <li>มี workflow ใช้ AI ช่วย refine, debug, handoff และ iterate</li>
+                  </ul>
+                </div>
+
+                <div class="rounded-2xl border border-[#b99042]/25 bg-[#b99042]/10 p-5">
+                  <p class="text-sm font-semibold text-[#f9e5bc]">Narrative ที่ต้องชัด</p>
+                  <p class="mt-2 text-sm leading-7 text-slate-100">
+                    หน้านี้เป็น landing page สำหรับดาวน์โหลดโปรแกรมและศึกษาแนวคิดของระบบ
+                    แต่ตัวโปรแกรมจริงคือ WinForms app ที่รันในเครื่องผู้ใช้ ไม่ใช่ SaaS, ไม่ใช่ dashboard บนเว็บ
+                  </p>
+                </div>
+              </div>
             </div>
+          </div>
 
-            <div class="mt-6 grid gap-4">
-              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
-                <p class="text-sm font-semibold text-[#f6d9a4]">สำหรับผู้ใช้ทั่วไป</p>
-                <ul class="mt-3 space-y-2 text-sm leading-6 text-slate-200">
-                  <li>ติดตั้งแล้วใช้ในเครื่องได้ทันที</li>
-                  <li>กรอกข้อมูลครั้งเดียวแล้วออกเอกสารหลายใบ</li>
-                  <li>เก็บ output ไว้ในโฟลเดอร์ของโปรแกรม</li>
-                  <li>แก้ Word template ภายหลังได้ถ้าต้องการ</li>
-                </ul>
+          <aside class="warning-visual-panel">
+            <div class="warning-visual-frame">
+              <div class="warning-visual-head">
+                <div>
+                  <p class="warning-visual-kicker">Download Alert</p>
+                  <h3 class="warning-visual-title">ไม่ต้องตกใจ ถ้า Chrome เตือนตอนโหลด</h3>
+                </div>
+                <span class="warning-visual-badge">warn 1-2</span>
               </div>
 
-              <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
-                <p class="text-sm font-semibold text-[#c9d8ff]">สำหรับคนที่อยากศึกษา</p>
-                <ul class="mt-3 space-y-2 text-sm leading-6 text-slate-200">
-                  <li>มี handoff อธิบายสถาปัตยกรรมและ business rules</li>
-                  <li>แยก master data, preset data และ template registry ชัด</li>
-                  <li>แนวคิด reusable docx engine สำหรับระบบเอกสารอื่น</li>
-                  <li>มี workflow ใช้ AI ช่วย refine, debug, handoff และ iterate</li>
-                </ul>
-              </div>
+              <p class="warning-visual-copy">
+                ถ้าคุณกดโหลด <strong>ตัวติดตั้ง</strong> หรือ <strong>source code zip</strong> แล้ว Chrome มองว่าไฟล์น่าสงสัย
+                ให้กดเข้าไปดูรายละเอียดก่อน จากนั้นเลือกดาวน์โหลดต่อได้ถ้าชื่อไฟล์ตรงกับที่หน้านี้ระบุไว้
+              </p>
 
-              <div class="rounded-2xl border border-[#b99042]/25 bg-[#b99042]/10 p-5">
-                <p class="text-sm font-semibold text-[#f9e5bc]">Narrative ที่ต้องชัด</p>
-                <p class="mt-2 text-sm leading-7 text-slate-100">
-                  หน้านี้เป็น landing page สำหรับดาวน์โหลดโปรแกรมและศึกษาแนวคิดของระบบ
-                  แต่ตัวโปรแกรมจริงคือ WinForms app ที่รันในเครื่องผู้ใช้ ไม่ใช่ SaaS, ไม่ใช่ dashboard บนเว็บ
-                </p>
+              <div class="warning-visual-grid">
+                <figure class="warning-shot">
+                  <img src="./assets/warn%201.png" alt="ตัวอย่าง Chrome แจ้งเตือนว่าการดาวน์โหลดน่าสงสัย" class="warning-shot-image">
+                  <figcaption>1. Chrome อาจขึ้นเตือนว่าการดาวน์โหลดนี้น่าสงสัย</figcaption>
+                </figure>
+
+                <figure class="warning-shot">
+                  <img src="./assets/warn%202.png" alt="ตัวอย่างปุ่มดาวน์โหลดไฟล์ที่น่าสงสัยต่อใน Chrome" class="warning-shot-image">
+                  <figcaption>2. กดเข้าไป แล้วเลือกดาวน์โหลดต่อ ถ้าคุณโหลดจากหน้านี้จริง</figcaption>
+                </figure>
               </div>
             </div>
           </div>
