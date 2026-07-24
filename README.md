@@ -116,8 +116,8 @@ Get-FileHash .\ReimbursementDocApp-Installer.zip -Algorithm SHA256
 
 | ไฟล์ | ขนาดโดยประมาณ | SHA-256 |
 |---|---:|---|
-| `ReimbursementDocApp-Installer.zip` | 508 KB | `E1CFD72C00D6832C8B03E63E0CA210D036EC44AD66C407315948CEC6058058C3` |
-| `ReimbursementDocApp-Source.zip` | 6.76 MB | `94F3E57D27A7F4ED108DC8507D431C3EAC34942D9F4DFA87E6ADA42180F692EF` |
+| `ReimbursementDocApp-Installer.zip` | 510 KB | `1068FE8EF3FDA2F33CC5540870B30DF8C41707B2ABD596AFE1BA1D9CAC8C01A8` |
+| `ReimbursementDocApp-Source.zip` | 7.35 MB | `2083911A2D5909514ECD9323264BB8606933E84F90E3E3035830795EED93C8A4` |
 
 อ่านวิธีติดตั้งแบบละเอียดได้ที่ [คู่มือบนเว็บไซต์](./guide.html) หรือ [คู่มือข้อความ](./assets/downloads/README-%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A5%E0%B8%87%E0%B9%82%E0%B8%9B%E0%B8%A3%E0%B9%81%E0%B8%81%E0%B8%A3%E0%B8%A1%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%87%E0%B8%B2%E0%B8%99.txt)
 
