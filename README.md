@@ -1,23 +1,39 @@
 <div align="center">
 
-# jmoney
+<img src="./assets/readme/jmoney-hero.svg" alt="jmoney 2.0 — Offline Word document automation" width="100%">
+
+<p>
+  <img src="https://img.shields.io/badge/jmoney-2.0.0-ff38b7?style=for-the-badge&logo=windows&logoColor=white" alt="jmoney 2.0.0">
+  <img src="https://img.shields.io/badge/Windows-Offline-00d8ff?style=for-the-badge&logo=windows&logoColor=07152f" alt="Windows offline">
+  <img src="https://img.shields.io/badge/65%20tests-PASS-91f77a?style=for-the-badge&logo=checkmarx&logoColor=07152f" alt="65 tests pass">
+  <img src="https://img.shields.io/badge/Local%20data-No%20cloud-ffc94f?style=for-the-badge&logo=databricks&logoColor=07152f" alt="Local data no cloud">
+</p>
 
 ### โปรแกรมสร้างและบริหารชุดเอกสาร Word แบบออฟไลน์สำหรับ Windows
 
-กรอกข้อมูลครั้งเดียว · เลือกเอกสารเป็นกลุ่ม · สร้าง Word หลายฉบับ<br>
-เพิ่มแม่แบบและ Custom Tag ได้โดยไม่แก้โค้ด
+กรอกข้อมูลครั้งเดียว → เลือกเอกสารเป็นกลุ่ม → สร้าง Word หลายฉบับ<br>
+<strong>เพิ่ม Template และ Custom Tag ได้โดยไม่แก้โค้ด</strong>
 
-**รุ่นปัจจุบัน: 2.0.0**
-
-[ดาวน์โหลดโปรแกรม](./assets/downloads/ReimbursementDocApp-Installer.zip)
-·
-[เปิดคู่มือภาษาไทย](./guide.html)
-·
-[ดาวน์โหลด Source](./assets/downloads/ReimbursementDocApp-Source.zip)
-·
-[ดูประวัติรุ่น](./CHANGELOG.md)
+<p>
+  <a href="./assets/downloads/ReimbursementDocApp-Installer.zip"><img src="https://img.shields.io/badge/⬇_DOWNLOAD_INSTALLER-07152f?style=for-the-badge&logoColor=white&labelColor=00bde0" alt="Download installer"></a>
+  <a href="./guide.html"><img src="https://img.shields.io/badge/📖_OPEN_THAI_GUIDE-271043?style=for-the-badge&labelColor=ff38b7" alt="Open Thai guide"></a>
+  <a href="./assets/downloads/ReimbursementDocApp-Source.zip"><img src="https://img.shields.io/badge/⚙_GET_SOURCE-07152f?style=for-the-badge&labelColor=8e43ff" alt="Get source"></a>
+</p>
 
 </div>
+
+<p align="center">🟦 🟪 🟨 🩷 🟦 🟪 🟨 🩷 🟦 🟪 🟨 🩷 🟦 🟪 🟨 🩷 🟦</p>
+
+> [!TIP]
+> **jmoney 2.0 มีสองเส้นทางชัดเจน:** ผู้ใช้ทั่วไปสร้างเอกสารจากหน้าหลัก ส่วนผู้ดูแลใช้ศูนย์จัดการกลุ่ม แม่แบบ และ Tag โดยมี Draft → Validate → Trial Render → Active คอยกันเอกสารที่ยังไม่พร้อม
+
+<table>
+  <tr>
+    <td align="center" width="33%"><b>⚡ 1 ครั้ง</b><br>กรอกข้อมูลชุดเดียว</td>
+    <td align="center" width="33%"><b>🗂️ หลายกลุ่ม</b><br>เลือกเอกสารตามกระบวนการ</td>
+    <td align="center" width="33%"><b>🛡️ 65 Tests</b><br>ตรวจ document และ upgrade</td>
+  </tr>
+</table>
 
 ---
 

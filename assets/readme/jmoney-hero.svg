@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="500" viewBox="0 0 1600 500" role="img" aria-labelledby="title description">
+  <title id="title">jmoney 2.0 — Offline Word document automation</title>
+  <desc id="description">A vivid navy, cyan, pink and gold banner for jmoney version 2.0.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07152f"/>
+      <stop offset="0.46" stop-color="#172f66"/>
+      <stop offset="1" stop-color="#3b1266"/>
+    </linearGradient>
+    <linearGradient id="titleFill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="0.45" stop-color="#82f8ff"/>
+      <stop offset="1" stop-color="#ffc6ee"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16d9ff" stop-opacity=".24"/>
+      <stop offset="1" stop-color="#ff38b7" stop-opacity=".18"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.8" fill="#9aefff" opacity=".23"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="500" fill="url(#bg)"/>
+  <rect width="1600" height="500" fill="url(#dots)"/>
+  <circle cx="1390" cy="-60" r="300" fill="#ff28b5" opacity=".32"/>
+  <circle cx="1455" cy="80" r="185" fill="#762dff" opacity=".42"/>
+  <circle cx="120" cy="490" r="250" fill="#00d8ff" opacity=".18"/>
+  <path d="M0 404 C265 294 430 540 710 408 S1180 292 1600 410 L1600 500 L0 500Z" fill="#020817" opacity=".46"/>
+  <path d="M0 416 C265 306 430 552 710 420 S1180 304 1600 422" fill="none" stroke="#42e9ff" stroke-width="3" opacity=".8"/>
+  <path d="M0 430 C265 320 430 566 710 434 S1180 318 1600 436" fill="none" stroke="#ff49bd" stroke-width="3" opacity=".75"/>
+
+  <g transform="translate(92 70)">
+    <rect x="0" y="0" width="292" height="49" rx="24.5" fill="#ffd65b"/>
+    <circle cx="28" cy="24.5" r="9" fill="#07152f"/>
+    <text x="52" y="31" fill="#07152f" font-family="Segoe UI, Tahoma, sans-serif" font-size="20" font-weight="800" letter-spacing="2">VERSION 2.0.0</text>
+
+    <text x="0" y="151" fill="url(#titleFill)" font-family="Segoe UI, Tahoma, sans-serif" font-size="102" font-weight="900" letter-spacing="-4">jmoney</text>
+    <text x="6" y="207" fill="#f5f8ff" font-family="Segoe UI, Tahoma, sans-serif" font-size="30" font-weight="700">OFFLINE WORD DOCUMENT AUTOMATION</text>
+    <text x="6" y="255" fill="#b8cce8" font-family="Segoe UI, Tahoma, sans-serif" font-size="24">กรอกครั้งเดียว • จัดกลุ่มเอกสาร • เพิ่ม Template และ Tag ได้</text>
+
+    <g transform="translate(4 294)">
+      <rect width="174" height="54" rx="27" fill="#00d8ff" filter="url(#glow)"/>
+      <text x="87" y="35" text-anchor="middle" fill="#06152d" font-family="Segoe UI, Tahoma, sans-serif" font-size="19" font-weight="900">WINDOWS</text>
+      <rect x="192" width="174" height="54" rx="27" fill="#ff42b9" filter="url(#glow)"/>
+      <text x="279" y="35" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Tahoma, sans-serif" font-size="19" font-weight="900">LOCAL DATA</text>
+      <rect x="384" width="210" height="54" rx="27" fill="#ffc94f" filter="url(#glow)"/>
+      <text x="489" y="35" text-anchor="middle" fill="#2a1644" font-family="Segoe UI, Tahoma, sans-serif" font-size="19" font-weight="900">65 TESTS PASS</text>
+    </g>
+  </g>
+
+  <g transform="translate(1128 107)">
+    <rect width="325" height="280" rx="34" fill="url(#card)" stroke="#9df5ff" stroke-opacity=".75" stroke-width="2"/>
+    <rect x="24" y="25" width="277" height="42" rx="14" fill="#071b3c" opacity=".86"/>
+    <circle cx="48" cy="46" r="8" fill="#ff48bb"/>
+    <circle cx="72" cy="46" r="8" fill="#ffd55d"/>
+    <circle cx="96" cy="46" r="8" fill="#42e9ff"/>
+    <text x="25" y="111" fill="#8dfeff" font-family="Consolas, monospace" font-size="17">{ข้อมูล}  →  DOCX</text>
+    <text x="25" y="153" fill="#ffffff" font-family="Segoe UI, Tahoma, sans-serif" font-size="25" font-weight="800">Template Manager</text>
+    <text x="25" y="191" fill="#f2b7ff" font-family="Segoe UI, Tahoma, sans-serif" font-size="20" font-weight="700">Draft → Validate → Active</text>
+    <path d="M26 228 H274" stroke="#3ee9ff" stroke-width="3" stroke-linecap="round"/>
+    <text x="25" y="257" fill="#c5d8ec" font-family="Segoe UI, Tahoma, sans-serif" font-size="16">Groups • Custom Tags • Recovery</text>
+  </g>
+</svg>
