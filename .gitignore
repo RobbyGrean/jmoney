@@ -1,0 +1,4 @@
+# Local build and migration workspaces; public artifacts live in assets/downloads.
+/Legacy-TagFix-Source/
+/ReimbursementDocApp-Installer/
+/ReimbursementDocApp-Source/

@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>คู่มือการใช้งาน jmoney | ติดตั้ง ใช้งาน และแก้ปัญหาเบื้องต้น</title>
+  <title>คู่มือการใช้งาน jmoney 2.0 | ผู้ใช้ทั่วไปและศูนย์ผู้ดูแล</title>
   <meta
     name="description"
-    content="คู่มือการใช้งาน jmoney แบบอ่านง่าย สำหรับผู้ใช้ทั่วไป ครอบคลุมการติดตั้ง การเปิดโปรแกรม การดู output การแก้ Template และการแก้ปัญหาเบื้องต้น"
+    content="คู่มือ jmoney 2.0 ครอบคลุมการติดตั้ง อัปเกรด สร้างเอกสาร จัดกลุ่ม นำเข้า Word template สร้าง Custom Tag และกู้คืนข้อมูล"
   >
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./styles.css">
@@ -44,7 +44,7 @@
     <main class="relative z-10 mx-auto max-w-7xl px-6 pb-16 pt-4 lg:px-10 lg:pb-24">
       <section class="guide-hero">
         <p class="guide-kicker">Thai User Guide</p>
-        <h1 class="guide-title">คู่มือการใช้งาน jmoney</h1>
+        <h1 class="guide-title">คู่มือการใช้งาน jmoney 2.0</h1>
         <p class="guide-subtitle">
           หน้านี้ทำมาเพื่อให้ผู้ใช้ทั่วไปอ่านแล้วทำตามได้ทันที
           ตั้งแต่ดาวน์โหลด ติดตั้ง เปิดโปรแกรม ไปจนถึงการดูไฟล์ที่สร้างเสร็จและการแก้ปัญหาเบื้องต้น
@@ -55,7 +55,7 @@
           <div class="guide-chip">ใช้กับ Windows</div>
           <div class="guide-chip">ทำงานแบบออฟไลน์</div>
           <div class="guide-chip">สร้างเอกสาร Word จาก template</div>
-          <div class="guide-chip">เหมาะกับผู้ใช้ทั่วไป</div>
+          <div class="guide-chip">มีศูนย์ผู้ดูแลแยกต่างหาก</div>
         </div>
 
         <div class="guide-actions">
@@ -299,7 +299,7 @@
           <div class="guide-bullet-list">
             <div class="guide-bullet">
               <strong>ไฟล์สำคัญที่อยู่ในโฟลเดอร์นี้</strong>
-              <p><span class="guide-inline-code">ReimbursementDocApp.exe</span> คือโปรแกรมหลัก, <span class="guide-inline-code">Template</span> คือโฟลเดอร์เก็บ Word template, <span class="guide-inline-code">output</span> คือโฟลเดอร์เก็บเอกสารที่สร้างเสร็จ และ <span class="guide-inline-code">app_database.json</span> คือข้อมูลที่ระบบใช้</p>
+              <p><span class="guide-inline-code">ReimbursementDocApp.exe</span> คือโปรแกรมหลัก, <span class="guide-inline-code">Template</span> เก็บ Word template, <span class="guide-inline-code">output</span> เก็บเอกสารที่สร้างเสร็จ และ <span class="guide-inline-code">admin-backups</span> เก็บสำเนาก่อนงานที่มีผลกระทบ</p>
             </div>
             <div class="guide-bullet">
               <strong>ผู้ใช้ทั่วไปไม่จำเป็นต้องเข้า path นี้บ่อย</strong>
@@ -393,24 +393,72 @@
         </article>
 
         <article class="guide-section">
-          <p class="guide-kicker">Section 6</p>
-          <h2 class="section-title">ถ้าต้องการแก้ Template</h2>
+          <p class="guide-kicker">Administrator Center</p>
+          <h2 class="section-title">เพิ่มกลุ่มและนำเข้า Template อย่างปลอดภัย</h2>
           <p class="section-copy">
-            ให้เข้าไปที่โฟลเดอร์นี้:
+            เครื่องมือนี้เหมาะสำหรับผู้ดูแลระบบ ผู้ใช้ทั่วไปไม่จำเป็นต้องเข้าไปเปลี่ยนค่า
           </p>
-          <div class="guide-code-block">%LOCALAPPDATA%\ReimbursementDocApp\Template</div>
           <div class="guide-bullet-list">
             <div class="guide-bullet">
-              <strong>แก้ไฟล์ Word `.docx` ได้โดยตรง</strong>
-              <p>เหมาะสำหรับปรับข้อความหรือหน้าตาเอกสารบางจุดตามที่ต้องการ</p>
+              <strong>กด <span class="guide-inline-code">ตั้งค่า</span> และอ่านคำเตือน</strong>
+              <p>ศูนย์ผู้ดูแลถูกแยกออกจากหน้าสร้างเอกสาร เพื่อลดการแก้ระบบโดยไม่ตั้งใจ</p>
             </div>
             <div class="guide-bullet">
-              <strong>อย่าลบ tag ในวงเล็บปีกกา</strong>
-              <p>เช่น <span class="guide-inline-code">{ชื่อโรงเรียน}</span> ถ้ายังต้องการให้โปรแกรมแทนค่าข้อมูลให้อัตโนมัติ</p>
+              <strong>สร้างกลุ่ม แล้วกด <span class="guide-inline-code">นำเข้า DOCX</span></strong>
+              <p>เลือกไฟล์จากตำแหน่งใดก็ได้ ระบบจะคัดลอกเข้า Template โดยไม่แก้ไฟล์ต้นฉบับ</p>
             </div>
             <div class="guide-bullet">
-              <strong>ปิดไฟล์ Word ก่อนกลับมาสร้างเอกสารใหม่</strong>
-              <p>เพื่อป้องกันปัญหาไฟล์ถูกล็อกและเขียนทับไม่ได้</p>
+              <strong>แม่แบบใหม่ยังไม่ถูกใช้ทันที</strong>
+              <p>ระบบเก็บเป็น <span class="guide-inline-code">ฉบับร่าง</span> จนกว่าจะตรวจสอบ ทดลองสร้าง และเปิดใช้งาน</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="mt-8 guide-grid lg:grid-cols-2">
+        <article class="guide-section">
+          <p class="guide-kicker">Custom Tag</p>
+          <h2 class="section-title">เพิ่มช่องข้อมูลใหม่ให้เอกสาร</h2>
+          <div class="guide-step-list">
+            <div class="guide-step">
+              <span class="guide-step-number">1</span>
+              <div>
+                <strong>เปิด <span class="guide-inline-code">พจนานุกรม Tag</span></strong>
+                <p>System Tag ที่มากับโปรแกรมเป็นแบบอ่านอย่างเดียว ส่วนแท็กที่เพิ่มเองคือ Custom Tag</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <span class="guide-step-number">2</span>
+              <div>
+                <strong>ตั้งชื่อในรูป <span class="guide-inline-code">{ชื่อแท็ก}</span></strong>
+                <p>เลือกชนิด Text, Multiline, Number, Date หรือ Choice และกำหนดคำอธิบาย/ค่าบังคับตามงานจริง</p>
+              </div>
+            </div>
+            <div class="guide-step">
+              <span class="guide-step-number">3</span>
+              <div>
+                <strong>ตรวจสอบแม่แบบก่อนเปิดใช้งาน</strong>
+                <p>แท็กที่ไม่รู้จัก วงเล็บผิด หรือแท็กระบบที่จำเป็นหาย จะทำให้แม่แบบไม่ผ่านและไม่ไปปะปนกับงานประจำ</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="guide-section">
+          <p class="guide-kicker">Validation & Recovery</p>
+          <h2 class="section-title">ตรวจผลกระทบและกู้คืน</h2>
+          <div class="guide-bullet-list">
+            <div class="guide-bullet">
+              <strong>ดูรายการแท็กด้วยปุ่มช่วยเหลือ</strong>
+              <p>ตรวจชื่อและหน้าที่ของแท็กปัจจุบันก่อนแก้ DOCX เพื่อป้องกันการใช้ชื่อผิด</p>
+            </div>
+            <div class="guide-bullet">
+              <strong>เปลี่ยนชื่อ Custom Tag อย่างมีขั้นตอน</strong>
+              <p>ระบบจะแสดงเอกสารที่ได้รับผลกระทบและสำรอง DOCX ก่อนเปลี่ยนชื่อ</p>
+            </div>
+            <div class="guide-bullet">
+              <strong>ใช้หน้า <span class="guide-inline-code">ตรวจสอบและกู้คืน</span></strong>
+              <p>สแกนแม่แบบ สำรองการตั้งค่า คืนค่าจากสำรอง และเปิดโฟลเดอร์กู้คืนได้จากจุดเดียว</p>
             </div>
           </div>
         </article>
@@ -436,6 +484,10 @@
             <div class="guide-bullet">
               <strong>ถ้าโปรแกรมเปิดได้แต่สร้างเอกสารไม่ออก</strong>
               <p>ให้ตรวจว่ามีโฟลเดอร์ <span class="guide-inline-code">output</span> อยู่และใช้งานได้ตามปกติ</p>
+            </div>
+            <div class="guide-bullet">
+              <strong>ก่อนอัปเกรดให้ปิดโปรแกรมและ Word</strong>
+              <p>ตัวติดตั้งรุ่นใหม่รักษาข้อมูลผู้ใช้และสร้างสำเนาไฟล์ระบบเดิมใน <span class="guide-inline-code">admin-backups</span></p>
             </div>
           </div>
         </article>
