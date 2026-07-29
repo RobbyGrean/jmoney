@@ -1,0 +1,46 @@
+{
+  "name": "@robbygrean/jmoney-installer",
+  "version": "0.1.0",
+  "description": "Verified Windows installer and updater for jmoney",
+  "license": "UNLICENSED",
+  "type": "commonjs",
+  "bin": {
+    "jmoney": "bin/jmoney.js",
+    "jmoney-installer": "bin/jmoney.js"
+  },
+  "files": [
+    "bin",
+    "lib",
+    "releases.json",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check bin/jmoney.js && node --check lib/installer.js",
+    "prepack": "node --check bin/jmoney.js && node --check lib/installer.js && node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "os": [
+    "win32"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobbyGrean/jmoney.git",
+    "directory": "npm-installer"
+  },
+  "homepage": "https://github.com/RobbyGrean/jmoney",
+  "bugs": {
+    "url": "https://github.com/RobbyGrean/jmoney/issues"
+  },
+  "keywords": [
+    "jmoney",
+    "windows",
+    "installer",
+    "updater"
+  ]
+}
