@@ -12,37 +12,41 @@ currently shows its normal user interface and requires user interaction.
 - Windows 10 or later
 - Node.js 18 or later, including `npm`/`npx`
 
+The examples below use `npx.cmd` because it works in Windows PowerShell even
+when that machine's execution policy blocks `npx.ps1`. In Command Prompt, both
+`npx` and `npx.cmd` work.
+
 ## Commands
 
 Install the latest stable app:
 
 ```powershell
-npx --yes @robbygrean/jmoney-installer@latest install
+npx.cmd --yes @robbygrean/jmoney-installer@latest install
 ```
 
 Upgrade an existing installation:
 
 ```powershell
-npx --yes @robbygrean/jmoney-installer@latest update
+npx.cmd --yes @robbygrean/jmoney-installer@latest update
 ```
 
 `patch` is an alias for `update`:
 
 ```powershell
-npx --yes @robbygrean/jmoney-installer@latest patch
+npx.cmd --yes @robbygrean/jmoney-installer@latest patch
 ```
 
 Install a version listed by the package:
 
 ```powershell
-npx --yes @robbygrean/jmoney-installer@latest install 2.0.0
+npx.cmd --yes @robbygrean/jmoney-installer@latest install 2.0.0
 ```
 
 Check versions without changing the installation:
 
 ```powershell
-npx --yes @robbygrean/jmoney-installer@latest status
-npx --yes @robbygrean/jmoney-installer@latest versions
+npx.cmd --yes @robbygrean/jmoney-installer@latest status
+npx.cmd --yes @robbygrean/jmoney-installer@latest versions
 ```
 
 Add `--dry-run` to `install`, `update`, or `patch` to show the selected
