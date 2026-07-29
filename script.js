@@ -15,6 +15,47 @@ mobileLinks.forEach((link) => {
   });
 });
 
+const copyButtons = document.querySelectorAll("[data-copy-command]");
+
+async function copyCommand(text) {
+  if (navigator.clipboard?.writeText) {
+    await navigator.clipboard.writeText(text);
+    return;
+  }
+
+  const textArea = document.createElement("textarea");
+  textArea.value = text;
+  textArea.setAttribute("readonly", "");
+  textArea.style.position = "fixed";
+  textArea.style.opacity = "0";
+  document.body.appendChild(textArea);
+  textArea.select();
+  const copied = document.execCommand("copy");
+  textArea.remove();
+  if (!copied) throw new Error("Copy command was rejected");
+}
+
+copyButtons.forEach((button) => {
+  button.addEventListener("click", async () => {
+    const command = button.dataset.copyCommand;
+    const status = button.parentElement.querySelector("[data-copy-status]");
+    const originalLabel = button.textContent;
+
+    try {
+      await copyCommand(command);
+      button.textContent = "คัดลอกแล้ว";
+      status.textContent = "คัดลอกคำสั่งไปยังคลิปบอร์ดแล้ว";
+    } catch {
+      button.textContent = "คัดลอกไม่สำเร็จ";
+      status.textContent = "คัดลอกไม่สำเร็จ กรุณาเลือกข้อความในช่องคำสั่งแล้วคัดลอกเอง";
+    }
+
+    window.setTimeout(() => {
+      button.textContent = originalLabel;
+    }, 1800);
+  });
+});
+
 const revealTargets = document.querySelectorAll(
   ".hero-panel, .cta-card, .panel-card, .metric-card, .idea-card, .ai-step, .section-head"
 );

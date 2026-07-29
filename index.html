@@ -146,8 +146,26 @@
                 </p>
               </div>
               <div class="min-w-0 space-y-3 lg:w-[31rem]">
-                <pre class="overflow-x-auto rounded-2xl border border-white/10 bg-black/25 px-4 py-3 text-sm text-cyan-100"><code>npx.cmd --yes @robbygrean/jmoney-installer@latest install</code></pre>
-                <pre class="overflow-x-auto rounded-2xl border border-white/10 bg-black/25 px-4 py-3 text-sm text-cyan-100"><code>npx.cmd --yes @robbygrean/jmoney-installer@latest update</code></pre>
+                <div class="flex min-w-0 overflow-hidden rounded-2xl border border-white/10 bg-black/25">
+                  <code class="min-w-0 flex-1 overflow-x-auto whitespace-nowrap px-4 py-3 font-mono text-sm text-cyan-100">npx.cmd --yes @robbygrean/jmoney-installer@latest install</code>
+                  <button
+                    type="button"
+                    class="copy-command shrink-0 border-l border-white/10 px-3 py-3 text-xs font-bold text-cyan-100 transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
+                    data-copy-command="npx.cmd --yes @robbygrean/jmoney-installer@latest install"
+                    aria-label="คัดลอกคำสั่งติดตั้ง jmoney"
+                  >คัดลอก</button>
+                  <span class="sr-only" data-copy-status aria-live="polite"></span>
+                </div>
+                <div class="flex min-w-0 overflow-hidden rounded-2xl border border-white/10 bg-black/25">
+                  <code class="min-w-0 flex-1 overflow-x-auto whitespace-nowrap px-4 py-3 font-mono text-sm text-cyan-100">npx.cmd --yes @robbygrean/jmoney-installer@latest update</code>
+                  <button
+                    type="button"
+                    class="copy-command shrink-0 border-l border-white/10 px-3 py-3 text-xs font-bold text-cyan-100 transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300"
+                    data-copy-command="npx.cmd --yes @robbygrean/jmoney-installer@latest update"
+                    aria-label="คัดลอกคำสั่งอัปเดต jmoney"
+                  >คัดลอก</button>
+                  <span class="sr-only" data-copy-status aria-live="polite"></span>
+                </div>
                 <p class="text-xs leading-6 text-white/55">
                   ใช้คำสั่ง <code class="text-white/80">patch</code> แทน <code class="text-white/80">update</code> ได้
                   โดย Setup จะสำรองข้อมูลเดิมก่อนอัปเกรด
