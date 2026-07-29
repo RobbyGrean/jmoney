@@ -16,13 +16,82 @@
 
 <p>
   <a href="./assets/downloads/ReimbursementDocApp-Installer.zip"><img src="https://img.shields.io/badge/⬇_DOWNLOAD_INSTALLER-07152f?style=for-the-badge&logoColor=white&labelColor=00bde0" alt="Download installer"></a>
+  <a href="#ติดตั้งด่วน--เลือกวิธีที่ถนัด"><img src="https://img.shields.io/badge/⌨_SHELL_INSTALL-07152f?style=for-the-badge&labelColor=91f77a" alt="Install from shell"></a>
   <a href="./guide.html"><img src="https://img.shields.io/badge/📖_OPEN_THAI_GUIDE-271043?style=for-the-badge&labelColor=ff38b7" alt="Open Thai guide"></a>
   <a href="./assets/downloads/ReimbursementDocApp-Source.zip"><img src="https://img.shields.io/badge/⚙_GET_SOURCE-07152f?style=for-the-badge&labelColor=8e43ff" alt="Get source"></a>
+  <a href="./ROADMAP_HANDOFF_TH.md"><img src="https://img.shields.io/badge/🧭_ROADMAP_%26_HANDOFF-271043?style=for-the-badge&labelColor=ffc94f" alt="Roadmap and handoff"></a>
 </p>
 
 </div>
 
 <p align="center">🟦 🟪 🟨 🩷 🟦 🟪 🟨 🩷 🟦 🟪 🟨 🩷 🟦 🟪 🟨 🩷 🟦</p>
+
+## ติดตั้งด่วน — เลือกวิธีที่ถนัด
+
+### วิธี A — ดาวน์โหลดแล้วเปิด Setup
+
+เหมาะกับผู้ใช้ทั่วไปและไม่ต้องติดตั้ง Node.js:
+
+1. ดาวน์โหลด [ReimbursementDocApp-Installer.zip](./assets/downloads/ReimbursementDocApp-Installer.zip)
+2. คลิกขวาไฟล์ ZIP แล้วเลือก **Extract All / แยกไฟล์ทั้งหมด**
+3. เปิดโฟลเดอร์ที่แตกแล้ว จากนั้นเปิด `ReimbursementDocApp-Setup.exe`
+4. ทำตามหน้าต่าง Setup จนเสร็จ โปรแกรมจะเปิดให้อัตโนมัติ
+5. ครั้งถัดไปเปิดได้จาก Desktop หรือ Start Menu
+
+> [!IMPORTANT]
+> ต้องแตก ZIP ก่อนเปิด Setup และควรปิด jmoney กับเอกสาร Word ที่เกี่ยวข้องก่อนติดตั้งทับเพื่ออัปเดต
+
+### วิธี B — สั่งผ่าน PowerShell ด้วย `npx`
+
+เหมาะกับผู้ที่ต้องการคำสั่งติดตั้ง อัปเดต หรือตรวจสอบรุ่นจาก shell โดยเครื่องต้องเป็น Windows และมี **Node.js 18 ขึ้นไป** พร้อม `npm`/`npx`
+
+1. เปิด Start Menu พิมพ์ `PowerShell` แล้วเปิด **Windows PowerShell**
+2. ตรวจว่า Node.js และ npx พร้อมใช้งาน:
+
+   ```powershell
+   node --version
+   npx --version
+   ```
+
+3. ติดตั้ง jmoney รุ่นล่าสุด:
+
+   ```powershell
+   npx --yes @robbygrean/jmoney-installer@latest install
+   ```
+
+4. รอให้คำสั่งดาวน์โหลดและตรวจ SHA-256 จากนั้นหน้าต่าง Setup จะเปิดขึ้น
+5. ทำตามหน้าต่าง Setup ให้เสร็จเหมือนการติดตั้งแบบ Manual
+
+คำสั่งที่ใช้ภายหลัง:
+
+| งานที่ต้องการ | คำสั่ง PowerShell |
+|---|---|
+| ติดตั้งรุ่นล่าสุด | `npx --yes @robbygrean/jmoney-installer@latest install` |
+| อัปเดตโปรแกรมที่ติดตั้งอยู่ | `npx --yes @robbygrean/jmoney-installer@latest update` |
+| อัปเดตด้วยชื่อคำสั่งแบบ patch | `npx --yes @robbygrean/jmoney-installer@latest patch` |
+| ดูรุ่นที่ติดตั้งและรุ่นล่าสุด | `npx --yes @robbygrean/jmoney-installer@latest status` |
+| ดูรุ่นที่ package รองรับ | `npx --yes @robbygrean/jmoney-installer@latest versions` |
+| ทดลองดูว่าจะทำอะไรโดยยังไม่ติดตั้ง | เติม `--dry-run` หลังคำสั่ง `install`, `update` หรือ `patch` |
+
+ตัวอย่างตรวจสอบก่อนติดตั้งจริง:
+
+```powershell
+npx --yes @robbygrean/jmoney-installer@latest install --dry-run
+```
+
+ตัวอย่างเลือกรุ่นที่ระบุ:
+
+```powershell
+npx --yes @robbygrean/jmoney-installer@latest install 2.0.0
+```
+
+> [!NOTE]
+> `update` และ `patch` เป็นคำสั่งเดียวกันในรุ่นปัจจุบัน โดยดาวน์โหลด Installer ZIP เต็มชุดที่ตรวจ checksum แล้วเปิด Setup ในโหมดอัปเกรด ระบบจะรักษาข้อมูลเดิมและสร้าง backup ตามกลไกของ installer ไม่ใช่ binary delta patch
+
+> [!CAUTION]
+> คำสั่ง npx ไม่ปิดหรือข้าม Windows SmartScreen/Defender และ Setup รุ่นปัจจุบันยังมีหน้าต่างให้ผู้ใช้กดยืนยัน ไม่ใช่ silent install หลังติดตั้งแล้วตัวโปรแกรม jmoney ยังทำงานแบบ offline/local-first ตามเดิม
+
+ถ้าคำสั่ง `node` หรือ `npx` ไม่พบ และไม่ต้องการติดตั้ง Node.js ให้ใช้ **วิธี A** ได้ทันที ส่วนรายละเอียดการติดตั้ง การอัปเกรด และ checksum อยู่ในหัวข้อ [ดาวน์โหลด ติดตั้ง และอัปเกรด](#ดาวน์โหลด-ติดตั้ง-และอัปเกรด)
 
 > [!TIP]
 > **jmoney 2.0 มีสองเส้นทางชัดเจน:** ผู้ใช้ทั่วไปสร้างเอกสารจากหน้าหลัก ส่วนผู้ดูแลใช้ศูนย์จัดการกลุ่ม แม่แบบ และ Tag โดยมี Draft → Validate → Trial Render → Active คอยกันเอกสารที่ยังไม่พร้อม
@@ -58,7 +127,8 @@
 17. [สำหรับนักพัฒนา](#สำหรับนักพัฒนา)
 18. [การทดสอบและ Release Checklist](#การทดสอบและ-release-checklist)
 19. [ความปลอดภัย ความเป็นส่วนตัว และข้อจำกัด](#ความปลอดภัย-ความเป็นส่วนตัว-และข้อจำกัด)
-20. [รุ่นเก่าและประวัติการเปลี่ยนแปลง](#รุ่นเก่าและประวัติการเปลี่ยนแปลง)
+20. [Roadmap และ Handoff สำหรับพัฒนาต่อ](#roadmap-และ-handoff-สำหรับพัฒนาต่อ)
+21. [รุ่นเก่าและประวัติการเปลี่ยนแปลง](#รุ่นเก่าและประวัติการเปลี่ยนแปลง)
 
 ---
 
@@ -162,7 +232,7 @@ flowchart LR
 | ไฟล์ | ขนาด | SHA-256 |
 |---|---:|---|
 | `ReimbursementDocApp-Installer.zip` | 563,638 bytes | `457D9AEBEDCD86323D6CB2B345851A3548420E0E890B20DF7D0E5FB544593D09` |
-| `ReimbursementDocApp-Source.zip` | 1,755,114 bytes | `E9E8F5F3A43893D1305F615E9E03C6EC05AE506B568F95109F539BD9327DA55D` |
+| `ReimbursementDocApp-Source.zip` | 1,786,580 bytes | `E321C594EF787863696561957B620206CC650AFDF4694B4054A68722A2EF51DA` |
 
 ตรวจด้วย PowerShell:
 
@@ -1029,6 +1099,8 @@ Source ZIP มี:
 - `CODEX_STARTER_PROMPT_TH.md` Prompt ตั้งต้นสำหรับ Codex
 - `TEMPLATE_AND_TAG_SPEC_TH.md` ข้อกำหนด Template/Tag
 - `EXTENSION_EXAMPLE_TH.md` ตัวอย่างเพิ่มกลุ่มและเอกสาร 11 แบบ
+- `ROADMAP_HANDOFF_TH.md` แผนแม่บทและกติกาส่งต่องานข้ามเครื่อง
+- `docs/roadmap/` Handoff, Prompt และ `/goal` แยกตาม Version
 
 ### เอกสารสำหรับนำ Source ไปสร้างระบบของตนเอง
 
@@ -1038,6 +1110,8 @@ Source ZIP มี:
 | `CODEX_STARTER_PROMPT_TH.md` | ต้องการให้ Codex ส่วนตัวอ่านและช่วยปรับ Source |
 | `TEMPLATE_AND_TAG_SPEC_TH.md` | ต้องตัดสินใจ System Tag, Custom Tag, lifecycle หรือ packaging |
 | `EXTENSION_EXAMPLE_TH.md` | ต้องการดูตัวอย่างตั้งแต่กลุ่มใหม่จนถึง build release |
+| `ROADMAP_HANDOFF_TH.md` | ต้องการดูสถานะรวม ลำดับ Version และเริ่มทำงานต่อบนเครื่องอื่น |
+| `docs/roadmap/PHASE-*.md` | ต้องการสัญญางาน เกณฑ์รับมอบ Prompt และ `/goal` ของ Version ที่เลือก |
 
 Source ZIP ไม่บรรจุ:
 
@@ -1182,6 +1256,30 @@ powershell -ExecutionPolicy Bypass -File .\run-installer-tests.ps1
 - การเปลี่ยนข้อความยาวมากอาจกระทบ pagination ตามธรรมชาติของ Word
 - ผู้ใช้ต้องมีโปรแกรมที่เปิด DOCX ได้หากต้องการตรวจหรือแก้ไฟล์ด้วยตนเอง
 - การแก้ DOCX ภายนอกโปรแกรมควรปิด Word ก่อนสแกนหรือสร้างเอกสาร
+
+---
+
+## Roadmap และ Handoff สำหรับพัฒนาต่อ
+
+แผนพัฒนาหลังรุ่น 2.0.0 ถูกจัดทำเป็นเอกสารที่พกไปกับ Source ZIP เพื่อให้เริ่มงานต่อบนคอมพิวเตอร์เครื่องอื่นได้ โดยไม่ต้องอาศัยประวัติ Chat เดิม
+
+เริ่มที่ [ROADMAP_HANDOFF_TH.md](./ROADMAP_HANDOFF_TH.md) ซึ่งระบุ baseline, สถาปัตยกรรมเป้าหมาย, ลำดับ dependency, กติกาข้ามเครื่อง, Definition of Done และแบบฟอร์ม checkpoint กลาง
+
+| Version / Phase | เป้าหมายหลัก | เอกสารสั่งงาน |
+|---|---|---|
+| 2.0.1 | Hardening, diagnostics, catalog recovery และ security limits | [PHASE-2.0.1-HARDENING.md](./docs/roadmap/PHASE-2.0.1-HARDENING.md) |
+| 2.1 | UX สำหรับรายการ Template จำนวนมาก การค้นหาและ validation cache | [PHASE-2.1-LARGE-CATALOG-UX.md](./docs/roadmap/PHASE-2.1-LARGE-CATALOG-UX.md) |
+| 2.2 | Template Package สำหรับ export/import ชุดกลุ่ม เอกสาร และ Tag | [PHASE-2.2-TEMPLATE-PACKAGES.md](./docs/roadmap/PHASE-2.2-TEMPLATE-PACKAGES.md) |
+| 2.3 | Professional release: source layout, CI, reproducible build และ signing readiness | [PHASE-2.3-PROFESSIONAL-RELEASE.md](./docs/roadmap/PHASE-2.3-PROFESSIONAL-RELEASE.md) |
+| 3.0 | แยกสถาปัตยกรรมแบบ Modular Monolith โดยคงพฤติกรรมเดิม | [PHASE-3.0-MODULAR-ARCHITECTURE.md](./docs/roadmap/PHASE-3.0-MODULAR-ARCHITECTURE.md) |
+| Optional | Discovery สำหรับการใช้หลายคน หลายเครื่อง และระดับองค์กร | [PHASE-OPTIONAL-ORGANIZATION.md](./docs/roadmap/PHASE-OPTIONAL-ORGANIZATION.md) |
+
+แต่ละเอกสารมีขอบเขตงาน, สิ่งที่ห้ามเปลี่ยน, acceptance criteria, test plan, migration/rollback และข้อความพร้อมคัดลอกสำหรับ Codex สองรูปแบบ:
+
+- ใช้ **Chat Prompt** เมื่อต้องการสำรวจ วิเคราะห์ หรือขอข้อเสนอโดยยังไม่แก้ไฟล์
+- ใช้ **`/goal`** เมื่อต้องการให้ Codex ลงมือทำงานยาวจนผ่านเกณฑ์รับมอบ
+
+การสั่ง `/goal` ไม่ถือเป็นการอนุญาตให้ commit, push, สร้าง release หรือเปลี่ยนไฟล์นอก repository ผู้สั่งต้องอนุญาตการกระทำเหล่านั้นแยกต่างหาก
 
 ---
 
