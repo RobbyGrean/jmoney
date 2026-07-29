@@ -41,7 +41,7 @@
 > [!IMPORTANT]
 > ต้องแตก ZIP ก่อนเปิด Setup และควรปิด jmoney กับเอกสาร Word ที่เกี่ยวข้องก่อนติดตั้งทับเพื่ออัปเดต
 
-### วิธี B — สั่งผ่าน PowerShell ด้วย `npx`
+### วิธี B — สั่งผ่าน PowerShell ด้วย `npx.cmd`
 
 เหมาะกับผู้ที่ต้องการคำสั่งติดตั้ง อัปเดต หรือตรวจสอบรุ่นจาก shell โดยเครื่องต้องเป็น Windows และมี **Node.js 18 ขึ้นไป** พร้อม `npm`/`npx`
 
@@ -56,7 +56,7 @@
 3. ติดตั้ง jmoney รุ่นล่าสุด:
 
    ```powershell
-   npx --yes @robbygrean/jmoney-installer@latest install
+   npx.cmd --yes @robbygrean/jmoney-installer@latest install
    ```
 
 4. รอให้คำสั่งดาวน์โหลดและตรวจ SHA-256 จากนั้นหน้าต่าง Setup จะเปิดขึ้น
@@ -66,23 +66,23 @@
 
 | งานที่ต้องการ | คำสั่ง PowerShell |
 |---|---|
-| ติดตั้งรุ่นล่าสุด | `npx --yes @robbygrean/jmoney-installer@latest install` |
-| อัปเดตโปรแกรมที่ติดตั้งอยู่ | `npx --yes @robbygrean/jmoney-installer@latest update` |
-| อัปเดตด้วยชื่อคำสั่งแบบ patch | `npx --yes @robbygrean/jmoney-installer@latest patch` |
-| ดูรุ่นที่ติดตั้งและรุ่นล่าสุด | `npx --yes @robbygrean/jmoney-installer@latest status` |
-| ดูรุ่นที่ package รองรับ | `npx --yes @robbygrean/jmoney-installer@latest versions` |
+| ติดตั้งรุ่นล่าสุด | `npx.cmd --yes @robbygrean/jmoney-installer@latest install` |
+| อัปเดตโปรแกรมที่ติดตั้งอยู่ | `npx.cmd --yes @robbygrean/jmoney-installer@latest update` |
+| อัปเดตด้วยชื่อคำสั่งแบบ patch | `npx.cmd --yes @robbygrean/jmoney-installer@latest patch` |
+| ดูรุ่นที่ติดตั้งและรุ่นล่าสุด | `npx.cmd --yes @robbygrean/jmoney-installer@latest status` |
+| ดูรุ่นที่ package รองรับ | `npx.cmd --yes @robbygrean/jmoney-installer@latest versions` |
 | ทดลองดูว่าจะทำอะไรโดยยังไม่ติดตั้ง | เติม `--dry-run` หลังคำสั่ง `install`, `update` หรือ `patch` |
 
 ตัวอย่างตรวจสอบก่อนติดตั้งจริง:
 
 ```powershell
-npx --yes @robbygrean/jmoney-installer@latest install --dry-run
+npx.cmd --yes @robbygrean/jmoney-installer@latest install --dry-run
 ```
 
 ตัวอย่างเลือกรุ่นที่ระบุ:
 
 ```powershell
-npx --yes @robbygrean/jmoney-installer@latest install 2.0.0
+npx.cmd --yes @robbygrean/jmoney-installer@latest install 2.0.0
 ```
 
 > [!NOTE]
@@ -90,6 +90,9 @@ npx --yes @robbygrean/jmoney-installer@latest install 2.0.0
 
 > [!CAUTION]
 > คำสั่ง npx ไม่ปิดหรือข้าม Windows SmartScreen/Defender และ Setup รุ่นปัจจุบันยังมีหน้าต่างให้ผู้ใช้กดยืนยัน ไม่ใช่ silent install หลังติดตั้งแล้วตัวโปรแกรม jmoney ยังทำงานแบบ offline/local-first ตามเดิม
+
+> [!TIP]
+> บน Windows PowerShell ให้ใช้ `npx.cmd` ตามตัวอย่างด้านบน เพื่อหลีกเลี่ยงกรณีที่นโยบาย PowerShell บล็อกไฟล์ `npx.ps1` ส่วน Command Prompt ใช้ `npx` หรือ `npx.cmd` ได้ทั้งคู่
 
 ถ้าคำสั่ง `node` หรือ `npx` ไม่พบ และไม่ต้องการติดตั้ง Node.js ให้ใช้ **วิธี A** ได้ทันที ส่วนรายละเอียดการติดตั้ง การอัปเกรด และ checksum อยู่ในหัวข้อ [ดาวน์โหลด ติดตั้ง และอัปเกรด](#ดาวน์โหลด-ติดตั้ง-และอัปเกรด)
 

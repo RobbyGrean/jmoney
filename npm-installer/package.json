@@ -1,6 +1,6 @@
 {
   "name": "@robbygrean/jmoney-installer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Verified Windows installer and updater for jmoney",
   "license": "UNLICENSED",
   "type": "commonjs",

@@ -142,12 +142,12 @@
                 <h2 class="mt-3 text-2xl font-black">ติดตั้งหรืออัปเดตจาก PowerShell</h2>
                 <p class="mt-3 max-w-2xl text-sm leading-7 text-white/70">
                   สำหรับเครื่องที่มี Node.js 18 ขึ้นไป คำสั่งจะดาวน์โหลด Installer ZIP ชุดเดียวกับปุ่มด้านบน
-                  และตรวจสอบ SHA-256 ก่อนเปิด Setup ทุกครั้ง
+                  และตรวจสอบ SHA-256 ก่อนเปิด Setup ทุกครั้ง สำหรับ PowerShell ให้ใช้ <code>npx.cmd</code>
                 </p>
               </div>
               <div class="min-w-0 space-y-3 lg:w-[31rem]">
-                <pre class="overflow-x-auto rounded-2xl border border-white/10 bg-black/25 px-4 py-3 text-sm text-cyan-100"><code>npx --yes @robbygrean/jmoney-installer@latest install</code></pre>
-                <pre class="overflow-x-auto rounded-2xl border border-white/10 bg-black/25 px-4 py-3 text-sm text-cyan-100"><code>npx --yes @robbygrean/jmoney-installer@latest update</code></pre>
+                <pre class="overflow-x-auto rounded-2xl border border-white/10 bg-black/25 px-4 py-3 text-sm text-cyan-100"><code>npx.cmd --yes @robbygrean/jmoney-installer@latest install</code></pre>
+                <pre class="overflow-x-auto rounded-2xl border border-white/10 bg-black/25 px-4 py-3 text-sm text-cyan-100"><code>npx.cmd --yes @robbygrean/jmoney-installer@latest update</code></pre>
                 <p class="text-xs leading-6 text-white/55">
                   ใช้คำสั่ง <code class="text-white/80">patch</code> แทน <code class="text-white/80">update</code> ได้
                   โดย Setup จะสำรองข้อมูลเดิมก่อนอัปเกรด
