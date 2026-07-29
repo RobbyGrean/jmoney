@@ -144,8 +144,8 @@ Discovery เสร็จเมื่อ:
 ใช้ Prompt นี้ก่อนเสมอ:
 
 ```text
-อ่าน README.md, ROADMAP_HANDOFF_TH.md และ
-docs/roadmap/PHASE-OPTIONAL-ORGANIZATION.md ให้ครบ
+อ่าน README.md, Handof6steps/README.md และ
+Handof6steps/STEP-06-HANDOFF-OPTIONAL-ORGANIZATION.md ให้ครบ
 
 ทำ discovery สำหรับ Organization Mode โดยห้ามแก้ source:
 1. ถามคำถามทีละชุดเรื่องผู้ใช้/เครื่อง/ข้อมูล/สิทธิ์/sync/audit/deployment
@@ -168,7 +168,7 @@ docs/roadmap/PHASE-OPTIONAL-ORGANIZATION.md ให้ครบ
 ยังไม่ควรใช้แบบเติมอัตโนมัติ ต้องแทน `[ค่าที่อนุมัติ]`:
 
 ```text
-/goal พัฒนา jmoney [VERSION] Organization Mode ตาม ADR [ADR_PATH] และ docs/roadmap/PHASE-OPTIONAL-ORGANIZATION.md โดยใช้ architecture [APPROVED_ARCHITECTURE] สำหรับผู้ใช้ [USER_COUNT] เครื่อง [DEVICE_COUNT] แชร์เฉพาะ [APPROVED_SHARED_DATA] ใช้ identity/role [APPROVED_IDENTITY_AND_ROLES] และ conflict/offline policy [APPROVED_POLICY] ทำเฉพาะ MVP [APPROVED_MVP_SCOPE] รักษาข้อมูลที่ห้ามแชร์ [RESTRICTED_DATA], offline document generation, DOCX lifecycle, package signatures/audit/backup/rollback ตาม ADR ห้ามรวม [NON_GOALS] เพิ่ม security/privacy/offline/conflict/migration/deployment tests อัปเดต docs/version/release/checkpoint เสร็จเมื่อ acceptance และ threat-model controls ผ่านบน pilot environment และ rollback กลับ local-only ได้ ห้าม commit/push/deploy จนเจ้าของสั่งแต่ละ action
+/goal พัฒนา jmoney [VERSION] Organization Mode ตาม ADR [ADR_PATH] และ Handof6steps/STEP-06-HANDOFF-OPTIONAL-ORGANIZATION.md โดยใช้ architecture [APPROVED_ARCHITECTURE] สำหรับผู้ใช้ [USER_COUNT] เครื่อง [DEVICE_COUNT] แชร์เฉพาะ [APPROVED_SHARED_DATA] ใช้ identity/role [APPROVED_IDENTITY_AND_ROLES] และ conflict/offline policy [APPROVED_POLICY] ทำเฉพาะ MVP [APPROVED_MVP_SCOPE] รักษาข้อมูลที่ห้ามแชร์ [RESTRICTED_DATA], offline document generation, DOCX lifecycle, package signatures/audit/backup/rollback ตาม ADR ห้ามรวม [NON_GOALS] เพิ่ม security/privacy/offline/conflict/migration/deployment tests อัปเดต docs/version/release/checkpoint เสร็จเมื่อ acceptance และ threat-model controls ผ่านบน pilot environment และ rollback กลับ local-only ได้ ห้าม commit/push/deploy จนเจ้าของสั่งแต่ละ action
 ```
 
 ห้ามใช้ Goal นี้หาก placeholder ยังไม่ถูกแทน

@@ -267,8 +267,8 @@ Rollback:
 ## 11. Prompt สำหรับ Chat ก่อน Goal
 
 ```text
-อ่าน README.md, ROADMAP_HANDOFF_TH.md และ
-docs/roadmap/PHASE-2.1-LARGE-CATALOG-UX.md ให้ครบ
+อ่าน README.md, Handof6steps/README.md และ
+Handof6steps/STEP-02-HANDOFF-2.1-LARGE-CATALOG-UX.md ให้ครบ
 
 วิเคราะห์ source รุ่น 2.0.1 โดยยังไม่แก้ไฟล์:
 - trace RefreshTemplateTree, selection state และ dynamic field rebuild
@@ -288,7 +288,7 @@ file/method impact, acceptance matrix และ migration/rollback
 ## 12. /goal พร้อมใช้
 
 ```text
-/goal พัฒนา jmoney 2.1.0 ตาม docs/roadmap/PHASE-2.1-LARGE-CATALOG-UX.md บนฐาน 2.0.1 ให้รองรับ 20 กลุ่ม 500 แม่แบบและ 100 Custom Tags: เพิ่ม search ภาษาไทย/อังกฤษ, group/status filter, collapse/expand พร้อมจำ state, selection tools, favorites/recent, selected/visible/total counts, Admin Center search/bulk validation ที่มี progress/cancel และ validation cache ที่ invalidates จาก file fingerprint/tag set/inspector version พร้อม lazy/background validation โดยไม่ block UI รักษา Active-only main list, hidden-selection policy ที่ชัด, group checkbox, dynamic fields, Draft→Validate→Trial→Active, offline/local-first, saved data/output/User Templates และ upgrade-safe installer ห้ามทำ Template Package, เปลี่ยน installer, database, permission หรือ refactor 3.0 เพิ่ม functional/performance/migration tests เทียบ stress baseline 2.0.1 รัน tests จนผ่าน อัปเดต version/docs/changelog/packages/checksum และ Checkpoint เสร็จเมื่อ 500-template acceptance/performance/cache invalidation/upgrade tests ผ่านและ required scope ครบ ห้าม commit/push จนเจ้าของสั่ง
+/goal พัฒนา jmoney 2.1.0 ตาม Handof6steps/STEP-02-HANDOFF-2.1-LARGE-CATALOG-UX.md บนฐาน 2.0.1 ให้รองรับ 20 กลุ่ม 500 แม่แบบและ 100 Custom Tags: เพิ่ม search ภาษาไทย/อังกฤษ, group/status filter, collapse/expand พร้อมจำ state, selection tools, favorites/recent, selected/visible/total counts, Admin Center search/bulk validation ที่มี progress/cancel และ validation cache ที่ invalidates จาก file fingerprint/tag set/inspector version พร้อม lazy/background validation โดยไม่ block UI รักษา Active-only main list, hidden-selection policy ที่ชัด, group checkbox, dynamic fields, Draft→Validate→Trial→Active, offline/local-first, saved data/output/User Templates และ upgrade-safe installer ห้ามทำ Template Package, เปลี่ยน installer, database, permission หรือ refactor 3.0 เพิ่ม functional/performance/migration tests เทียบ stress baseline 2.0.1 รัน tests จนผ่าน อัปเดต version/docs/changelog/packages/checksum และ Checkpoint เสร็จเมื่อ 500-template acceptance/performance/cache invalidation/upgrade tests ผ่านและ required scope ครบ ห้าม commit/push จนเจ้าของสั่ง
 ```
 
 ---

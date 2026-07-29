@@ -275,8 +275,8 @@ Rollback:
 ## 11. Prompt สำหรับ Chat ก่อน Goal
 
 ```text
-อ่าน README.md, ROADMAP_HANDOFF_TH.md,
-docs/roadmap/PHASE-2.2-TEMPLATE-PACKAGES.md และ
+อ่าน README.md, Handof6steps/README.md,
+Handof6steps/STEP-03-HANDOFF-2.2-TEMPLATE-PACKAGES.md และ
 TEMPLATE_AND_TAG_SPEC_TH.md ให้ครบ
 
 ยังไม่แก้ไฟล์ ให้ทำ architecture/design review:
@@ -298,7 +298,7 @@ conflict-resolution table, security controls, file impact และ test matrix
 ## 12. /goal พร้อมใช้
 
 ```text
-/goal พัฒนา jmoney 2.2.0 ตาม docs/roadmap/PHASE-2.2-TEMPLATE-PACKAGES.md บนฐาน 2.1.0: สร้าง .jmoney-template schema v1 สำหรับ export/import template เดียวหรือทั้งกลุ่มพร้อม Custom Tag dependencies, metadata, version และ checksums เพิ่ม secure package reader/writer, size/path/entry/schema guards, preflight DOCX inspection, deterministic conflict resolution, safe tag rename, staging + atomic commit + full rollback, package ownership/update/remove และบังคับ imported templates เป็น Draft ก่อน Validate/Trial/Active รักษา Search/Filter/cache, offline/local-first, System Tag locks, user data/output/User Templates และ upgrade safety ห้าม online marketplace, URL download, cloud sync, account หรือ executable plugin เพิ่ม security/round-trip/conflict/migration/rollback tests รันทุก tests จนผ่าน อัปเดต schema/version/docs/changelog/packages/checksum และ Checkpoint เสร็จเมื่อ export 11-document group แล้ว import บน clean/upgraded workspace ได้โดยไม่มี partial state และทุก security/upgrade test ผ่าน ห้าม commit/push จนเจ้าของสั่ง
+/goal พัฒนา jmoney 2.2.0 ตาม Handof6steps/STEP-03-HANDOFF-2.2-TEMPLATE-PACKAGES.md บนฐาน 2.1.0: สร้าง .jmoney-template schema v1 สำหรับ export/import template เดียวหรือทั้งกลุ่มพร้อม Custom Tag dependencies, metadata, version และ checksums เพิ่ม secure package reader/writer, size/path/entry/schema guards, preflight DOCX inspection, deterministic conflict resolution, safe tag rename, staging + atomic commit + full rollback, package ownership/update/remove และบังคับ imported templates เป็น Draft ก่อน Validate/Trial/Active รักษา Search/Filter/cache, offline/local-first, System Tag locks, user data/output/User Templates และ upgrade safety ห้าม online marketplace, URL download, cloud sync, account หรือ executable plugin เพิ่ม security/round-trip/conflict/migration/rollback tests รันทุก tests จนผ่าน อัปเดต schema/version/docs/changelog/packages/checksum และ Checkpoint เสร็จเมื่อ export 11-document group แล้ว import บน clean/upgraded workspace ได้โดยไม่มี partial state และทุก security/upgrade test ผ่าน ห้าม commit/push จนเจ้าของสั่ง
 ```
 
 ---

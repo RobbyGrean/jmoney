@@ -297,8 +297,8 @@ Rollback:
 ใช้เมื่ออยากให้ Codex ตรวจแผน/โค้ดก่อน ยังไม่ให้แก้:
 
 ```text
-อ่าน README.md, ROADMAP_HANDOFF_TH.md และ
-docs/roadmap/PHASE-2.0.1-HARDENING.md ให้ครบ
+อ่าน README.md, Handof6steps/README.md และ
+Handof6steps/STEP-01-HANDOFF-2.0.1-HARDENING.md ให้ครบ
 
 ตรวจ source รุ่น 2.0.0 และรายงาน:
 1. จุดที่ควรวาง logging โดยไม่เก็บ PII
@@ -318,7 +318,7 @@ docs/roadmap/PHASE-2.0.1-HARDENING.md ให้ครบ
 ## 11. /goal พร้อมใช้
 
 ```text
-/goal พัฒนา jmoney จาก 2.0.0 เป็น 2.0.1 ตาม docs/roadmap/PHASE-2.0.1-HARDENING.md ให้ครบ ทำเฉพาะในโปรเจกต์ jmoney: เพิ่ม About/runtime info, sanitized local logging, diagnostic support bundle แบบ allowlist, catalog integrity check + safe mode + restore, backup retention ที่มี path guard, DOCX safety limits และ stress baseline 50/100/500 templates รักษา offline/local-first, DOCX layout, saved data, output, User Template, legacy backup และ upgrade-safe installer ห้ามทำ Search/Filter, Template Package, เปลี่ยน installer technology หรือ refactor architecture ใหญ่ เพิ่ม tests ของ success/failure/security paths รัน baseline และ tests ใหม่จนผ่าน อัปเดต version/README/Guide/CHANGELOG/Source package/checksum และอัปเดต Checkpoint ใน Handoff เสร็จเมื่อ Acceptance/Installer/upgrade/security/package checks ผ่านทั้งหมดและไม่มี required scope เหลือ ห้าม commit หรือ push จนกว่าจะได้รับคำสั่งชัดเจน
+/goal พัฒนา jmoney จาก 2.0.0 เป็น 2.0.1 ตาม Handof6steps/STEP-01-HANDOFF-2.0.1-HARDENING.md ให้ครบ ทำเฉพาะในโปรเจกต์ jmoney: เพิ่ม About/runtime info, sanitized local logging, diagnostic support bundle แบบ allowlist, catalog integrity check + safe mode + restore, backup retention ที่มี path guard, DOCX safety limits และ stress baseline 50/100/500 templates รักษา offline/local-first, DOCX layout, saved data, output, User Template, legacy backup และ upgrade-safe installer ห้ามทำ Search/Filter, Template Package, เปลี่ยน installer technology หรือ refactor architecture ใหญ่ เพิ่ม tests ของ success/failure/security paths รัน baseline และ tests ใหม่จนผ่าน อัปเดต version/README/Guide/CHANGELOG/Source package/checksum และอัปเดต Checkpoint ใน Handoff เสร็จเมื่อ Acceptance/Installer/upgrade/security/package checks ผ่านทั้งหมดและไม่มี required scope เหลือ ห้าม commit หรือ push จนกว่าจะได้รับคำสั่งชัดเจน
 ```
 
 ---

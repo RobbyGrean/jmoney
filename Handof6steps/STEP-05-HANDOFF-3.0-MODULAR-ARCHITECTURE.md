@@ -314,8 +314,8 @@ flowchart LR
 ## 12. Prompt สำหรับ Chat ก่อน Goal
 
 ```text
-อ่าน README.md, ROADMAP_HANDOFF_TH.md และ
-docs/roadmap/PHASE-3.0-MODULAR-ARCHITECTURE.md ให้ครบ
+อ่าน README.md, Handof6steps/README.md และ
+Handof6steps/STEP-05-HANDOFF-3.0-MODULAR-ARCHITECTURE.md ให้ครบ
 
 ทำ architecture assessment ของ source 2.3.x โดยยังไม่แก้:
 - map UI/application/domain/infrastructure responsibilities ปัจจุบัน
@@ -337,7 +337,7 @@ migration matrix, parity gates และ file move map
 ## 13. /goal พร้อมใช้
 
 ```text
-/goal พัฒนา jmoney 3.0.0 ตาม docs/roadmap/PHASE-3.0-MODULAR-ARCHITECTURE.md จากฐาน 2.3.x ด้วย incremental modular-monolith refactor: สร้าง characterization/golden tests ก่อน, แยก Presentation/Application/Domain/Infrastructure, extract atomic store/backup/catalog repository+migrations/DOCX inspector+renderer/template lifecycle/tag/package/generation services ทีละ use case, ทำ UI event handlers ให้บาง, เพิ่ม composition root, stable Tag IDs แยกจาก placeholder/display/aliases และ numbered idempotent schema migration ที่ backup/verify/fail-safe รักษา behavior/layout/font/spacing/Header/Footer/split runs, offline data, search/cache/packages/diagnostics, saved data/output/User Templates และ installer upgrades ห้าม big-bang rewrite, microservices, cloud, database migration, UI framework rewrite หรือ feature ใหญ่ใหม่ ใช้ parity gate และ rollback ทุก checkpoint รัน domain/service/integration/UI smoke/migration/performance/CI/release tests อัปเดต version/docs/changelog/packages/checksum/Checkpoint เสร็จเมื่อ dependency rules ผ่าน, critical UI/DOCX behavior parity, migration fixtures 2.0–2.3 ผ่าน, clean release ผ่าน และไม่มี required scope เหลือ ห้าม commit/push จนเจ้าของสั่ง
+/goal พัฒนา jmoney 3.0.0 ตาม Handof6steps/STEP-05-HANDOFF-3.0-MODULAR-ARCHITECTURE.md จากฐาน 2.3.x ด้วย incremental modular-monolith refactor: สร้าง characterization/golden tests ก่อน, แยก Presentation/Application/Domain/Infrastructure, extract atomic store/backup/catalog repository+migrations/DOCX inspector+renderer/template lifecycle/tag/package/generation services ทีละ use case, ทำ UI event handlers ให้บาง, เพิ่ม composition root, stable Tag IDs แยกจาก placeholder/display/aliases และ numbered idempotent schema migration ที่ backup/verify/fail-safe รักษา behavior/layout/font/spacing/Header/Footer/split runs, offline data, search/cache/packages/diagnostics, saved data/output/User Templates และ installer upgrades ห้าม big-bang rewrite, microservices, cloud, database migration, UI framework rewrite หรือ feature ใหญ่ใหม่ ใช้ parity gate และ rollback ทุก checkpoint รัน domain/service/integration/UI smoke/migration/performance/CI/release tests อัปเดต version/docs/changelog/packages/checksum/Checkpoint เสร็จเมื่อ dependency rules ผ่าน, critical UI/DOCX behavior parity, migration fixtures 2.0–2.3 ผ่าน, clean release ผ่าน และไม่มี required scope เหลือ ห้าม commit/push จนเจ้าของสั่ง
 ```
 
 แนะนำให้ Goal นี้ทำเป็น checkpoints ไม่ควรรอ commit เดียวตอนจบ

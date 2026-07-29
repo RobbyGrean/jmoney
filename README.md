@@ -241,7 +241,7 @@ flowchart LR
 | ไฟล์ | ขนาด | SHA-256 |
 |---|---:|---|
 | `ReimbursementDocApp-Installer.zip` | 563,638 bytes | `457D9AEBEDCD86323D6CB2B345851A3548420E0E890B20DF7D0E5FB544593D09` |
-| `ReimbursementDocApp-Source.zip` | 1,786,580 bytes | `E321C594EF787863696561957B620206CC650AFDF4694B4054A68722A2EF51DA` |
+| `ReimbursementDocApp-Source.zip` | 1,794,817 bytes | `0F0E769BCFFDAB742B3CF0AF86CC41F3F2D788930393045CB6B3C13F2CF85CC5` |
 
 ตรวจด้วย PowerShell:
 
@@ -1108,8 +1108,9 @@ Source ZIP มี:
 - `CODEX_STARTER_PROMPT_TH.md` Prompt ตั้งต้นสำหรับ Codex
 - `TEMPLATE_AND_TAG_SPEC_TH.md` ข้อกำหนด Template/Tag
 - `EXTENSION_EXAMPLE_TH.md` ตัวอย่างเพิ่มกลุ่มและเอกสาร 11 แบบ
-- `ROADMAP_HANDOFF_TH.md` แผนแม่บทและกติกาส่งต่องานข้ามเครื่อง
-- `docs/roadmap/` Handoff, Prompt และ `/goal` แยกตาม Version
+- `Handof6steps/README.md` แผนแม่บทและกติกาส่งต่องานข้ามเครื่อง
+- `Handof6steps/STEP-*.md` Handoff, Prompt และ `/goal` แยกตาม Version
+- `npm-installer/` Source ของคำสั่งติดตั้งและอัปเดตผ่าน `npx`
 
 ### เอกสารสำหรับนำ Source ไปสร้างระบบของตนเอง
 
@@ -1119,8 +1120,9 @@ Source ZIP มี:
 | `CODEX_STARTER_PROMPT_TH.md` | ต้องการให้ Codex ส่วนตัวอ่านและช่วยปรับ Source |
 | `TEMPLATE_AND_TAG_SPEC_TH.md` | ต้องตัดสินใจ System Tag, Custom Tag, lifecycle หรือ packaging |
 | `EXTENSION_EXAMPLE_TH.md` | ต้องการดูตัวอย่างตั้งแต่กลุ่มใหม่จนถึง build release |
-| `ROADMAP_HANDOFF_TH.md` | ต้องการดูสถานะรวม ลำดับ Version และเริ่มทำงานต่อบนเครื่องอื่น |
-| `docs/roadmap/PHASE-*.md` | ต้องการสัญญางาน เกณฑ์รับมอบ Prompt และ `/goal` ของ Version ที่เลือก |
+| `Handof6steps/README.md` | ต้องการดูสถานะรวม ลำดับ Version และเริ่มทำงานต่อบนเครื่องอื่น |
+| `Handof6steps/STEP-*.md` | ต้องการสัญญางาน เกณฑ์รับมอบ Prompt และ `/goal` ของ Version ที่เลือก |
+| `npm-installer/` | ต้องการศึกษา ทดสอบ หรือต่อยอดคำสั่งติดตั้งและอัปเดตผ่าน `npx` |
 
 Source ZIP ไม่บรรจุ:
 
@@ -1272,16 +1274,16 @@ powershell -ExecutionPolicy Bypass -File .\run-installer-tests.ps1
 
 แผนพัฒนาหลังรุ่น 2.0.0 ถูกจัดทำเป็นเอกสารที่พกไปกับ Source ZIP เพื่อให้เริ่มงานต่อบนคอมพิวเตอร์เครื่องอื่นได้ โดยไม่ต้องอาศัยประวัติ Chat เดิม
 
-เริ่มที่ [ROADMAP_HANDOFF_TH.md](./ROADMAP_HANDOFF_TH.md) ซึ่งระบุ baseline, สถาปัตยกรรมเป้าหมาย, ลำดับ dependency, กติกาข้ามเครื่อง, Definition of Done และแบบฟอร์ม checkpoint กลาง
+เริ่มที่ [Handof6steps/README.md](./Handof6steps/README.md) ซึ่งระบุ baseline, สถาปัตยกรรมเป้าหมาย, ลำดับ dependency, กติกาข้ามเครื่อง, Definition of Done และแบบฟอร์ม checkpoint กลาง
 
 | Version / Phase | เป้าหมายหลัก | เอกสารสั่งงาน |
 |---|---|---|
-| 2.0.1 | Hardening, diagnostics, catalog recovery และ security limits | [PHASE-2.0.1-HARDENING.md](./docs/roadmap/PHASE-2.0.1-HARDENING.md) |
-| 2.1 | UX สำหรับรายการ Template จำนวนมาก การค้นหาและ validation cache | [PHASE-2.1-LARGE-CATALOG-UX.md](./docs/roadmap/PHASE-2.1-LARGE-CATALOG-UX.md) |
-| 2.2 | Template Package สำหรับ export/import ชุดกลุ่ม เอกสาร และ Tag | [PHASE-2.2-TEMPLATE-PACKAGES.md](./docs/roadmap/PHASE-2.2-TEMPLATE-PACKAGES.md) |
-| 2.3 | Professional release: source layout, CI, reproducible build และ signing readiness | [PHASE-2.3-PROFESSIONAL-RELEASE.md](./docs/roadmap/PHASE-2.3-PROFESSIONAL-RELEASE.md) |
-| 3.0 | แยกสถาปัตยกรรมแบบ Modular Monolith โดยคงพฤติกรรมเดิม | [PHASE-3.0-MODULAR-ARCHITECTURE.md](./docs/roadmap/PHASE-3.0-MODULAR-ARCHITECTURE.md) |
-| Optional | Discovery สำหรับการใช้หลายคน หลายเครื่อง และระดับองค์กร | [PHASE-OPTIONAL-ORGANIZATION.md](./docs/roadmap/PHASE-OPTIONAL-ORGANIZATION.md) |
+| 2.0.1 | Hardening, diagnostics, catalog recovery และ security limits | [STEP-01-HANDOFF-2.0.1-HARDENING.md](./Handof6steps/STEP-01-HANDOFF-2.0.1-HARDENING.md) |
+| 2.1 | UX สำหรับรายการ Template จำนวนมาก การค้นหาและ validation cache | [STEP-02-HANDOFF-2.1-LARGE-CATALOG-UX.md](./Handof6steps/STEP-02-HANDOFF-2.1-LARGE-CATALOG-UX.md) |
+| 2.2 | Template Package สำหรับ export/import ชุดกลุ่ม เอกสาร และ Tag | [STEP-03-HANDOFF-2.2-TEMPLATE-PACKAGES.md](./Handof6steps/STEP-03-HANDOFF-2.2-TEMPLATE-PACKAGES.md) |
+| 2.3 | Professional release: source layout, CI, reproducible build และ signing readiness | [STEP-04-HANDOFF-2.3-PROFESSIONAL-RELEASE.md](./Handof6steps/STEP-04-HANDOFF-2.3-PROFESSIONAL-RELEASE.md) |
+| 3.0 | แยกสถาปัตยกรรมแบบ Modular Monolith โดยคงพฤติกรรมเดิม | [STEP-05-HANDOFF-3.0-MODULAR-ARCHITECTURE.md](./Handof6steps/STEP-05-HANDOFF-3.0-MODULAR-ARCHITECTURE.md) |
+| Optional | Discovery สำหรับการใช้หลายคน หลายเครื่อง และระดับองค์กร | [STEP-06-HANDOFF-OPTIONAL-ORGANIZATION.md](./Handof6steps/STEP-06-HANDOFF-OPTIONAL-ORGANIZATION.md) |
 
 แต่ละเอกสารมีขอบเขตงาน, สิ่งที่ห้ามเปลี่ยน, acceptance criteria, test plan, migration/rollback และข้อความพร้อมคัดลอกสำหรับ Codex สองรูปแบบ:
 

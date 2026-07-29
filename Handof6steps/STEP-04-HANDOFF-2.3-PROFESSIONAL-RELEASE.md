@@ -310,8 +310,8 @@ Rollback:
 ## 11. Prompt สำหรับ Chat ก่อน Goal
 
 ```text
-อ่าน README.md, ROADMAP_HANDOFF_TH.md และ
-docs/roadmap/PHASE-2.3-PROFESSIONAL-RELEASE.md ให้ครบ
+อ่าน README.md, Handof6steps/README.md และ
+Handof6steps/STEP-04-HANDOFF-2.3-PROFESSIONAL-RELEASE.md ให้ครบ
 
 ทำ discovery/ADR โดยยังไม่แก้ไฟล์:
 - inventory tracked repo, Source ZIP และ local source workspace
@@ -333,7 +333,7 @@ CI job matrix, installer decision matrix และ acceptance checklist
 ## 12. /goal พร้อมใช้
 
 ```text
-/goal พัฒนา jmoney 2.3.0 ตาม docs/roadmap/PHASE-2.3-PROFESSIONAL-RELEASE.md บนฐาน 2.2.0: ย้าย canonical source/tests/built-in templates/config/build scripts มาเป็น tracked files ใน repository ด้วย migration/hash manifest, ปรับ clean clone build/test/package, ทำ version source of truth เดียว, GitHub Actions สำหรับ compile+tests+DOCX/package/version gates และ tag workflow ที่สร้าง draft release พร้อม Installer/Source/manifests/SHA-256 จาก tracked source เท่านั้น ทำ Installer ADR แล้วปรับ installer ให้มี Apps & Features metadata, upgrade/uninstall/repair contract และ signing-ready step โดยรักษาข้อมูลผู้ใช้/output/User Templates/catalog/package/lifecycle และ rollback assets ห้าม refactor architecture 3.0, database, cloud หรือ organization mode แยก source migration จาก behavior changes เพิ่ม clean-clone/CI/version/package/installer/signing tests อัปเดต docs/changelog/checksum/Checkpoint เสร็จเมื่อ clone ใหม่ build 65+ tests และ release artifacts ได้, CI gates failure ได้จริง, upgrade หลายรุ่นผ่าน และ draft release trace ถึง commit/tag ห้าม publish release, commit หรือ push จนเจ้าของสั่งแต่ละ action ชัดเจน
+/goal พัฒนา jmoney 2.3.0 ตาม Handof6steps/STEP-04-HANDOFF-2.3-PROFESSIONAL-RELEASE.md บนฐาน 2.2.0: ย้าย canonical source/tests/built-in templates/config/build scripts มาเป็น tracked files ใน repository ด้วย migration/hash manifest, ปรับ clean clone build/test/package, ทำ version source of truth เดียว, GitHub Actions สำหรับ compile+tests+DOCX/package/version gates และ tag workflow ที่สร้าง draft release พร้อม Installer/Source/manifests/SHA-256 จาก tracked source เท่านั้น ทำ Installer ADR แล้วปรับ installer ให้มี Apps & Features metadata, upgrade/uninstall/repair contract และ signing-ready step โดยรักษาข้อมูลผู้ใช้/output/User Templates/catalog/package/lifecycle และ rollback assets ห้าม refactor architecture 3.0, database, cloud หรือ organization mode แยก source migration จาก behavior changes เพิ่ม clean-clone/CI/version/package/installer/signing tests อัปเดต docs/changelog/checksum/Checkpoint เสร็จเมื่อ clone ใหม่ build 65+ tests และ release artifacts ได้, CI gates failure ได้จริง, upgrade หลายรุ่นผ่าน และ draft release trace ถึง commit/tag ห้าม publish release, commit หรือ push จนเจ้าของสั่งแต่ละ action ชัดเจน
 ```
 
 ---
