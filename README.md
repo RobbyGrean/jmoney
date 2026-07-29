@@ -17,9 +17,15 @@
 <p>
   <a href="./assets/downloads/ReimbursementDocApp-Installer.zip"><img src="https://img.shields.io/badge/⬇_DOWNLOAD_INSTALLER-07152f?style=for-the-badge&logoColor=white&labelColor=00bde0" alt="Download installer"></a>
   <a href="#ติดตั้งด่วน--เลือกวิธีที่ถนัด"><img src="https://img.shields.io/badge/⌨_SHELL_INSTALL-07152f?style=for-the-badge&labelColor=91f77a" alt="Install from shell"></a>
-  <a href="./guide.html"><img src="https://img.shields.io/badge/📖_OPEN_THAI_GUIDE-271043?style=for-the-badge&labelColor=ff38b7" alt="Open Thai guide"></a>
+  <a href="https://robbygrean.github.io/jmoney/guide.html"><img src="https://img.shields.io/badge/📖_OPEN_THAI_GUIDE-271043?style=for-the-badge&labelColor=ff38b7" alt="Open Thai guide"></a>
   <a href="./assets/downloads/ReimbursementDocApp-Source.zip"><img src="https://img.shields.io/badge/⚙_GET_SOURCE-07152f?style=for-the-badge&labelColor=8e43ff" alt="Get source"></a>
-  <a href="./ROADMAP_HANDOFF_TH.md"><img src="https://img.shields.io/badge/🧭_ROADMAP_%26_HANDOFF-271043?style=for-the-badge&labelColor=ffc94f" alt="Roadmap and handoff"></a>
+  <a href="https://github.com/RobbyGrean/jmoney/tree/main/Handof6steps"><img src="https://img.shields.io/badge/🧭_ROADMAP_%26_HANDOFF-271043?style=for-the-badge&labelColor=ffc94f" alt="Roadmap and handoff"></a>
+</p>
+
+<p>
+  <a href="https://robbygrean.github.io/jmoney/#download"><kbd>🌐 เยี่ยมชมหน้าดาวน์โหลด</kbd></a>
+  &nbsp;
+  <a href="https://robbygrean.github.io/jmoney/guide.html"><kbd>📖 เยี่ยมชมหน้าไกด์คู่มือ</kbd></a>
 </p>
 
 </div>
