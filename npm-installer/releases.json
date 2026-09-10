@@ -3,7 +3,7 @@
   "latest": "2.0.0",
   "releases": {
     "2.0.0": {
-      "url": "https://raw.githubusercontent.com/RobbyGrean/jmoney/b935ab2e54ff57051e5fc28daf926a9d08eddc34/assets/downloads/ReimbursementDocApp-Installer.zip",
+      "url": "https://raw.githubusercontent.com/RobbyGrean/jmoney/4c4d2fd/assets/downloads/ReimbursementDocApp-Installer.zip",
       "sha256": "457d9aebedcd86323d6cb2b345851a3548420e0e890b20df7d0e5fb544593d09",
       "size": 563638,
       "setupPath": "mhs2jm/ReimbursementDocApp-Setup.exe"
